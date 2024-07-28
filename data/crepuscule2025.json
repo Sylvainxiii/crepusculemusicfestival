@@ -1,0 +1,39 @@
+{
+    "festival": "Crepuscule Music Festival 2025",
+    "location": "Salle de Pratgraussal, rue de Lamothe, 81000 Albi",
+    "dates": [
+        "2025-03-25"
+    ],
+    "lineup": [
+        {
+            "artist": "Petit Chat",
+            "social": "",
+            "time": "22:00",
+            "img": "./src/assets/lineupImg/"
+        },
+        {
+            "artist": "Keïlo",
+            "social": "https://www.instagram.com/keilo.music/",
+            "time": "23:00",
+            "img": "./src/assets/lineupImg/"
+        },
+        {
+            "artist": "Dj Pat",
+            "social": "",
+            "time": "21:00",
+            "img": "./src/assets/lineupImg/"
+        },
+        {
+            "artist": "Bonaar",
+            "social": "https://www.instagram.com/bonaar/",
+            "time": "22:00",
+            "img": "./src/assets/lineupImg/"
+        },
+        {
+            "artist": "Sebastien B",
+            "social": "https://www.instagram.com/djsebastien.b/",
+            "time": "23:00",
+            "img": "./src/assets/lineupImg/"
+        }
+    ]
+}

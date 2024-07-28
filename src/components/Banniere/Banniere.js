@@ -1,0 +1,41 @@
+import './Banniere.css';
+import teaser from "/src/assets/video/teaser.mp4";
+import img from "/src/assets/images/fond-accueil.png";
+import logo from "/src/assets/images/logo.svg";
+
+const Banniere = () => {
+  const banniere = document.createElement('div');
+  banniere.id = 'banniere'
+
+  const videoContainer = document.createElement('div');
+  videoContainer.id = "container-video-banniere";
+
+  const video = document.createElement('video');
+  video.id = "video-banniere";
+  video.muted = true;
+  video.autoplay = true;
+  video.playsInline = true;
+  video.loop = true;
+
+  const sourcevideo = document.createElement('source');
+  sourcevideo.src = teaser;
+  sourcevideo.type = "video/mp4";
+
+  const imgBanniere = document.createElement('img');
+  imgBanniere.id = "img-banniere";
+  imgBanniere.src = img;
+
+  const logoBanniere = document.createElement('img');
+  logoBanniere.id = "logo-banniere";
+  logoBanniere.src = logo;
+
+  video.appendChild(sourcevideo);
+  videoContainer.appendChild(video);
+  banniere.appendChild(videoContainer);
+  banniere.appendChild(logoBanniere);
+  banniere.appendChild(imgBanniere);
+
+  return banniere;
+}
+
+export default Banniere;

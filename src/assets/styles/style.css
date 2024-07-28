@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/src/assets/images/fond-body.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    color: white;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: calc(5px + 1vw);
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: "Kufam", sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+
+}
+
+/* Personnaliser la barre de défilement (le curseur) */
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #BC1180;
+    box-shadow: inset 3px 5px 5px white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #27499A;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, rgba(39, 73, 154, 1) 10%, rgba(255, 255, 255, 1) 50%, rgba(39, 73, 154, 1) 90%);
+}
+
+*/ .flex-row,
+.flex-row-responsive {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column,
+.flex-column-responsive {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+}
+
+.start {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.end {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+    align-items: center;
+}

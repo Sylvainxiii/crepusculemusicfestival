@@ -1,0 +1,38 @@
+#banniere {
+    position: relative;
+    width: 100%;
+    height: 102vw
+}
+
+#container-video-banniere {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 104vw;
+    left: -2vw;
+    height: calc(100vw * 9 / 32);
+}
+
+#video-banniere {
+    position: absolute;
+    top: -25%;
+    width: 100%;
+}
+
+#img-banniere {
+    position: absolute;
+    top: -7vw;
+    left: -2vw;
+    width: 104vw;
+    z-index: 2;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 85%, rgba(255, 255, 255, 0) 100%);
+}
+
+#logo-banniere {
+    position: absolute;
+    width: 30vw;
+    top: 20vw;
+    left: 35%;
+    z-index: 3;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 85%, rgba(255, 255, 255, 0) 100%);
+}
