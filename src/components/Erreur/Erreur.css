@@ -1,0 +1,28 @@
+#erreur {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/src/assets/images/erreur404.webp");
+    background-size: cover;
+    background-position: center;
+    color: #BC1180;
+
+}
+
+#titre-404 {
+    font-family: var(--title-font-family);
+    font-size: 3em;
+    font-weight: 800;
+}
+
+#code-404 {
+    font-family: var(--title-font-family);
+    margin-left: 0;
+}
+
+#retour-accueil-404 {
+    margin-top: 150px;
+}
+
+#retour-accueil-404:visited {
+    color: #BC1180;
+}

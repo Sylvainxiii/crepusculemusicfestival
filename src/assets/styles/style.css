@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+@font-face {
+    font-family: "Oppossum";
+    src: url('/src/assets/fonts/oposs___.ttf');
+}
+
+@font-face {
+    font-family: "Locust";
+    src: url('/src/assets/fonts/Locust.ttf');
+}
+
+@font-face {
+    font-family: "Xirod";
+    src: url('/src/assets/fonts/Xirod.otf');
+}
+
+
+:root {
+    --main-font-color: #ffffff;
+    --main-font-family: "Oppossum", sans-serif;
+    --main-font-size: 12px;
+
+    --title-font-family: "Xirod";
+    --title-font-wheight: 400;
+
+    --texte-flashy-font-family: "Xirod", sans-serif;
+    --texte-flashy-font-wheight: 600;
+    --texte-flashy-font-size: 1em;
+    --texte-flashy-text-shadow: var(--texte-flashy-text-shadow-size) var(--texte-flashy-text-shadow-size) 0 rgba(var(--shadow-color), 1),
+        calc(var(--texte-flashy-text-shadow-size) * -1) var(--texte-flashy-text-shadow-size) 0 rgba(var(--shadow-color), 1),
+        calc(var(--texte-flashy-text-shadow-size) * -1) calc(var(--texte-flashy-text-shadow-size) * -1) 0 rgba(var(--shadow-color), 1),
+        var(--texte-flashy-text-shadow-size) calc(var(--texte-flashy-text-shadow-size) * -1) 0 rgba(var(--shadow-color), 1);
+    --texte-flashy-text-shadow-size: 0.05em;
+
+    --onglet-menu-font-size: 1.5em;
+    --onglet-menu-font-wheight: 600;
+    --onglet-menu-text-shadow: 0 0 0.1em rgba(var(--shadow-color), 1),
+        0 0 0.25em rgba(var(--shadow-color), 0.9),
+        0 0 0.5em rgba(var(--shadow-color), 0.7),
+        0 0 2em rgba(var(--shadow-color), 0.5);
+
+    --banniere-img-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 1) 70%, rgba(255, 255, 255, 0) 90%);
+    --banniere-logo-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 40%, rgba(255, 255, 255, 0.2) 100%);
+
+    --shadow-color: 40, 187, 194;
+    --shadow-color-fullrange: rgba(var(--shadow-color), 0.7);
+    --shadow-color-midrange: rgba(var(--shadow-color), 0.35);
+
+    --menu-background-color: rgba(0, 0, 0, 0.8);
+    --accueil-container-background-color: rgba(15, 30, 35, 1);
+    --vue-container-background-color: rgba(15, 30, 35, 0.7);
+
+    --bouton-menu-circulaire-transition: transform 0.7s, scale 0.3s;
+    --bouton-menu-circulaire-pointer-event: none;
+
+    --bouton-menu-classique-color: #ffffff;
+    --bouton-menu-classique-shadow: 0 0 0.2em 0.1em var(--shadow-color-fullrange);
+    --bouton-menu-classique-shadow-midrange: 0 0 0.2em 0.1em var(--shadow-color-midrange);
+
+    --bouton-box-shadow: 0 0 0.25em rgba(var(--shadow-color), 1),
+        0 0 1.2em rgba(var(--shadow-color), 1),
+        0 0 2em rgba(var(--shadow-color), 1),
+        0 0 4em rgba(var(--shadow-color), 1);
+
+    --footer-border-gradient: linear-gradient(0deg, rgba(var(--shadow-color), 0) 0%, rgba(var(--shadow-color), 1) 40%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%)
+}
+
+body {
+    background-image: url("/src/assets/images/fond-body.webp");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    color: var(--main-font-color);
+    font-family: var(--main-font-family);
+    letter-spacing: 0.2em;
+    font-size: var(--main-font-size);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-wheight);
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+/* suppression du style par défaut */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+
+/* style standard pour composants */
+.flex-row,
+.flex-row-responsive {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column,
+.flex-column-responsive {
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.start {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.end {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.space-around {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+/* Media Queries */
+
+@media (width >=768px) {
+    body {
+        font-size: calc(var(--main-font-size) + 4px);
+        /* Tablet */
+    }
+}
+
+@media (width >=1440px) {
+    body {
+        font-size: calc(var(--main-font-size) + 8px);
+        /* Desktop */
+    }
+}

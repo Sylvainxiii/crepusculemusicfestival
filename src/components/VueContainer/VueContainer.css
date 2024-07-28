@@ -1,0 +1,15 @@
+.vue-container {
+    background-color: var(--vue-container-background-color);
+    height: 100%;
+    width: 95%;
+    padding: 1em;
+}
+
+.vue-container h2 {
+    margin-bottom: 2em;
+    text-decoration: underline;
+}
+
+.vue-container div div {
+    margin-left: 2em;
+}

@@ -1,0 +1,10 @@
+.link-menu {
+    font-size: var(--onglet-menu-font-size);
+    font-weight: var(--onglet-menu-font-wheight);
+    color: var(--main-font-color);
+    /* text-shadow: var(--onglet-menu-text-shadow); */
+}
+
+#liste-menu {
+    gap: 1.5em;
+}

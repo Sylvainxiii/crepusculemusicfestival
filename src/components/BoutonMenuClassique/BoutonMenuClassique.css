@@ -1,0 +1,68 @@
+/* bouton hamburger -------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.hamburger {
+    top: 1em;
+    left: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    z-index: 20;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 10%;
+    background-color: var(--bouton-menu-classique-color);
+    border-radius: 0.25em;
+    transition: all 0.2s ease-in-out;
+}
+
+
+#bar1,
+#bar4 {
+    box-shadow: var(--bouton-menu-classique-shadow);
+}
+
+#bar1 {
+    top: 5%;
+}
+
+#bar4 {
+    bottom: 5%;
+}
+
+#bar2,
+#bar3 {
+    top: 45%;
+    box-shadow: var(--bouton-menu-classique-shadow-midrange);
+}
+
+/* css transition des barres */
+
+
+#bar1.translate-right,
+#bar4.translate-left {
+    background-color: transparent;
+    box-shadow: none;
+
+}
+
+#bar1.translate-right {
+    transform: translatex(2.5em);
+}
+
+#bar4.translate-left {
+    transform: translatex(-2.5em);
+}
+
+#bar2.rotate-45,
+#bar3.rotate-minus-45 {
+    box-shadow: var(--bouton-menu-classique-shadow);
+}
+
+#bar2.rotate-45 {
+    transform: rotate(45deg);
+}
+
+#bar3.rotate-minus-45 {
+    transform: rotate(-45deg);
+}

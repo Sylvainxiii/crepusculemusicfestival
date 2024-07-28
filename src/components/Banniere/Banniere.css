@@ -1,0 +1,33 @@
+#banniere {
+    width: 100%;
+    height: 95vw
+}
+
+#container-video-banniere {
+    overflow: hidden;
+    z-index: 1;
+    width: 130vw;
+    left: -15vw;
+    aspect-ratio: 16/9;
+}
+
+#video-banniere {
+    top: -25%;
+    width: 100%;
+}
+
+#img-banniere {
+    top: 10vw;
+    left: -2vw;
+    width: 104vw;
+    z-index: 2;
+    mask-image: var(--banniere-img-gradient-masque);
+}
+
+#logo-banniere {
+    width: 30vw;
+    top: 35vw;
+    left: 35%;
+    z-index: 3;
+    mask-image: var(--banniere-logo-gradient-masque);
+}

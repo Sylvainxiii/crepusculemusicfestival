@@ -1,0 +1,12 @@
+.titre-container {
+    background-color: var(--accueil-container-background-color);
+    height: 100%;
+    width: 100%;
+    padding: 5em 0 3em 0;
+    margin-bottom: 2em;
+}
+
+.titre-container h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
