@@ -1,0 +1,33 @@
+.menu-btn-container {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    z-index: 20;
+    top: 1em;
+    left: 0.5em;
+}
+
+#menu-btn-ext {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.7s, scale 0.3s;
+    pointer-events: none;
+}
+
+#menu-btn-int {
+    position: absolute;
+    width: 74%;
+    top: 13%;
+    left: 13%;
+    transition: transform 0.7s, scale 0.3s;
+    pointer-events: none;
+}
+
+#menu-btn-centre {
+    position: absolute;
+    width: 160%;
+    top: -30%;
+    left: -30%;
+    transition: transform 0.7s, scale 0.3s;
+    pointer-events: none;
+}

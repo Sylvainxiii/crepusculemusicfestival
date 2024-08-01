@@ -12,7 +12,8 @@ body {
     background-position: top right;
     color: white;
     font-family: "Merriweather Sans", sans-serif;
-    font-size: calc(5px + 1vw);
+    font-size: 14px;
+    /* Default for mobile */
     overflow-x: hidden;
 }
 
@@ -25,24 +26,10 @@ h1 {
 
 /* Personnaliser la barre de défilement (le curseur) */
 body::-webkit-scrollbar {
-    width: 15px;
+    width: none;
 }
 
-body::-webkit-scrollbar-track {
-    background: #BC1180;
-    box-shadow: inset 3px 5px 5px white;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #27499A;
-    border-radius: 5px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(90deg, rgba(39, 73, 154, 1) 10%, rgba(255, 255, 255, 1) 50%, rgba(39, 73, 154, 1) 90%);
-}
-
-*/ .flex-row,
+.flex-row,
 .flex-row-responsive {
     display: flex;
     flex-direction: row;
@@ -71,4 +58,25 @@ body::-webkit-scrollbar-thumb:hover {
 .space-between {
     justify-content: space-between;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+        /* Tablet */
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+        /* Desktop */
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+        /* Desktop */
+    }
 }

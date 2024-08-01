@@ -6,7 +6,7 @@ const AccueilContainer = (id, text) => {
 
     const titreAccueilContainer = document.createElement('h1');
     titreAccueilContainer.id = id;
-    titreAccueilContainer.innerText = text;
+    titreAccueilContainer.textContent = text;
     accueilContainer.appendChild(titreAccueilContainer);
 
     return accueilContainer;
