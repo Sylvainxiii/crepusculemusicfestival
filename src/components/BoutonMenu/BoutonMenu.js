@@ -31,7 +31,6 @@ const BoutonMenu = () => {
         let menu = document.getElementById("menu");
 
         if (btnActivate == false) {
-            boutonMenu.style.position = "fixed";
             menuBtnCercleExt.style.transform = 'rotate(300deg)';
             menuBtnCercleExt.style.scale = 0.6;
             menuBtnCercleInt.style.transform = 'rotate(-260deg)';
