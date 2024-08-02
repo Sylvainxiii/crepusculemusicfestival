@@ -3,7 +3,7 @@ import "./BoutonMenuClassique.css";
 const BoutonMenuClassique = () => {
 
     const boutonMenu = document.createElement('div');
-    boutonMenu.classList.add("hamburger");
+    boutonMenu.classList.add("hamburger", "fixed");
 
     for (let i = 0; i < 4; i = i + 1) {
         let bar = document.createElement('span');
@@ -22,28 +22,43 @@ const BoutonMenuClassique = () => {
         let bar4 = document.getElementById("bar4");
 
         if (btnActivate == false) {
+
             bar1.style.translate = "2.5em";
-            bar1.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            bar1.style.backgroundColor = "transparent";
             bar1.style.boxShadow = "none";
+
             bar2.style.transform = 'rotate(45deg)';
+            bar2.style.boxShadow = "var(--bouton-menu-classique-shadow)";
+
             bar3.style.transform = 'rotate(-45deg)';
+            bar3.style.boxShadow = "var(--bouton-menu-classique-shadow)";
+
             bar4.style.translate = "-2.5em";
-            bar4.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            bar4.style.backgroundColor = "transparent";
             bar4.style.boxShadow = "none";
+
             menu.style.top = 0;
-            menu.style.position = "fixed";
+            menu.classList.replace("absolute", "fixed");
+
             btnActivate = true
         } else {
             bar1.style.translate = "0";
-            bar1.style.backgroundColor = "rgba(255, 255, 255, 1)";
-            bar1.style.boxShadow = "0 0 0.2em 0.1em rgba(40, 187, 194, 0.7)";
+            bar1.style.backgroundColor = "var(--bouton-menu-classique-color)";
+            bar1.style.boxShadow = "var(--bouton-menu-classique-shadow)";
+
             bar2.style.transform = 'rotate(0deg)';
+            bar2.style.boxShadow = " var(--bouton-menu-classique-shadow-midrange)";
+
             bar3.style.transform = 'rotate(0deg)';
+            bar3.style.boxShadow = " var(--bouton-menu-classique-shadow-midrange)";
+
             bar4.style.translate = "0";
-            bar4.style.backgroundColor = "rgba(255, 255, 255, 1)";
-            bar4.style.boxShadow = "0 0 0.2em 0.1em rgba(40, 187, 194, 0.7)";
+            bar4.style.backgroundColor = "var(--bouton-menu-classique-color)";
+            bar4.style.boxShadow = "var(--bouton-menu-classique-shadow)";
+
             menu.style.top = "-102vh";
-            menu.style.position = "absolute";
+            menu.classList.replace("fixed", "absolute");
+
             btnActivate = false
         }
 

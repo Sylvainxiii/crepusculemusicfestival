@@ -6,6 +6,7 @@ const OngletMenu = () => {
 
     const ongletMenu = document.createElement('ul');
     ongletMenu.id = "liste-menu";
+    ongletMenu.classList.add("flex-column")
 
     for (let elmt in dataMenu) {
         let line = document.createElement('li');

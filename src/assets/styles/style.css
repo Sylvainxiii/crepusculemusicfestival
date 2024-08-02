@@ -5,26 +5,60 @@
     border: 0;
 }
 
+:root {
+    --main-font-color: #ffffff;
+    --main-font-family: "Merriweather Sans", sans-serif;
+    --main-font-size: 14px;
+
+    --title-font-family: "Kufam", sans-serif;
+    --title-font-wheight: 600;
+    --title-font-size: 2rem;
+
+    --onglet-menu-font-size: 1.5rem;
+    --onglet-menu-font-wheight: 600;
+    --onglet-menu-text-shadow: 0 0 0.1rem rgba(var(--shadow-color), 1),
+        0 0 0.25rem rgba(var(--shadow-color), 0.9),
+        0 0 0.5rem rgba(var(--shadow-color), 0.7),
+        0 0 2rem rgba(var(--shadow-color), 0.5);
+
+    --banniere-img-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 1) 85%, rgba(255, 255, 255, 0) 100%);
+    --banniere-logo-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 40%, rgba(255, 255, 255, 0.2) 100%);
+
+    --shadow-color: 40, 187, 194;
+    --shadow-color-fullrange: rgba(var(--shadow-color), 0.7);
+    --shadow-color-midrange: rgba(var(--shadow-color), 0.35);
+
+    --menu-background-color: rgba(0, 0, 0, 0.8);
+
+    --bouton-menu-circulaire-transition: transform 0.7s, scale 0.3s;
+    --bouton-menu-circulaire-pointer-event: none;
+
+    --bouton-menu-classique-color: #ffffff;
+    --bouton-menu-classique-shadow: 0 0 0.2rem 0.1rem var(--shadow-color-fullrange);
+    --bouton-menu-classique-shadow-midrange: 0 0 0.2rem 0.1rem var(--shadow-color-midrange);
+
+}
+
 body {
     background-image: url("/src/assets/images/fond-body.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
-    color: white;
-    font-family: "Merriweather Sans", sans-serif;
-    font-size: 14px;
-    /* Default for mobile */
+    color: var(--main-font-color);
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
     overflow-x: hidden;
 }
 
 h1 {
-    font-family: "Kufam", sans-serif;
-    font-weight: 600;
-    font-size: 2em;
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-wheight);
+    font-size: var(--title-font-size);
 
 }
 
+/* suppression du style par défaut */
 ul {
     list-style: none;
     margin: 0;
@@ -35,11 +69,12 @@ a {
     text-decoration: none;
 }
 
-/* Personnaliser la barre de défilement (le curseur) */
+/* Masquage de la barre de défilement */
 body::-webkit-scrollbar {
     width: none;
 }
 
+/* style standard pour composants */
 .flex-row,
 .flex-row-responsive {
     display: flex;
@@ -72,23 +107,30 @@ body::-webkit-scrollbar {
     align-items: center;
 }
 
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* Media Queries */
+
 @media (min-width: 768px) {
     body {
-        font-size: 18px;
+        font-size: calc(var(--main-font-size) + 4px);
         /* Tablet */
     }
 }
 
 @media (min-width: 1024px) {
     body {
-        font-size: 20px;
-        /* Desktop */
-    }
-}
-
-@media (min-width: 1024px) {
-    body {
-        font-size: 20px;
+        font-size: calc(var(--main-font-size) + 6px);
         /* Desktop */
     }
 }

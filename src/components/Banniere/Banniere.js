@@ -6,12 +6,15 @@ import logo from "/src/assets/images/logo.svg";
 const Banniere = () => {
   const banniere = document.createElement('div');
   banniere.id = 'banniere'
+  banniere.classList.add("relative");
 
   const videoContainer = document.createElement('div');
   videoContainer.id = "container-video-banniere";
+  videoContainer.classList.add("relative");
 
   const video = document.createElement('video');
   video.id = "video-banniere";
+  video.classList.add("absolute");
   video.muted = true;
   video.autoplay = true;
   video.playsInline = true;
@@ -24,9 +27,11 @@ const Banniere = () => {
   const imgBanniere = document.createElement('img');
   imgBanniere.id = "img-banniere";
   imgBanniere.src = img;
+  imgBanniere.classList.add("absolute");
 
   const logoBanniere = document.createElement('img');
   logoBanniere.id = "logo-banniere";
+  logoBanniere.classList.add("absolute");
   logoBanniere.src = logo;
 
   video.appendChild(sourcevideo);

@@ -6,19 +6,22 @@ import imgMenuBtnCentre from "/src/assets/images/menu-btn-centre.svg";
 const BoutonMenu = () => {
 
     const boutonMenu = document.createElement('div');
-    boutonMenu.className = "menu-btn-container";
+    boutonMenu.classList.add("menu-btn-container", "fixed");
     boutonMenu.id = "bouton-menu";
 
     let menuBtnCercleExt = document.createElement('img');
     menuBtnCercleExt.id = "menu-btn-ext";
+    menuBtnCercleExt.classList.add("absolute");
     menuBtnCercleExt.src = imgMenuBtnCercleExt;
 
     let menuBtnCercleInt = document.createElement('img');
     menuBtnCercleInt.id = "menu-btn-int";
+    menuBtnCercleInt.classList.add("absolute");
     menuBtnCercleInt.src = imgMenuBtnCercleInt;
 
     let menuBtnCentre = document.createElement('img');
     menuBtnCentre.id = "menu-btn-centre";
+    menuBtnCentre.classList.add("absolute");
     menuBtnCentre.src = imgMenuBtnCentre;
 
     boutonMenu.appendChild(menuBtnCercleExt);
