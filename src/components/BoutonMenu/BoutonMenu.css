@@ -6,24 +6,42 @@
     left: 0.5em;
 }
 
-#menu-btn-ext {
-    width: 100%;
+#menu-btn-ext,
+#menu-btn-int,
+#menu-btn-centre {
     transition: var(--bouton-menu-circulaire-transition);
     pointer-events: var(--bouton-menu-circulaire-pointer-event);
+}
+
+#menu-btn-ext {
+    width: 100%;
 }
 
 #menu-btn-int {
     width: 74%;
     top: 13%;
     left: 13%;
-    transition: var(--bouton-menu-circulaire-transition);
-    pointer-events: var(--bouton-menu-circulaire-pointer-event);
 }
 
 #menu-btn-centre {
     width: 160%;
     top: -30%;
     left: -30%;
-    transition: var(--bouton-menu-circulaire-transition);
-    pointer-events: var(--bouton-menu-circulaire-pointer-event);
+}
+
+/* animation bouton */
+
+.rotate-scale-ext {
+    transform: rotate(300deg);
+    scale: 0.6;
+}
+
+.rotate-scale-int {
+    transform: rotate(-260deg);
+    scale: 1.4;
+}
+
+.rotate-scale-centre {
+    transform: rotate(200deg);
+    scale: 0.5;
 }

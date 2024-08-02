@@ -9,17 +9,17 @@ const BoutonMenu = () => {
     boutonMenu.classList.add("menu-btn-container", "fixed");
     boutonMenu.id = "bouton-menu";
 
-    let menuBtnCercleExt = document.createElement('img');
+    const menuBtnCercleExt = document.createElement('img');
     menuBtnCercleExt.id = "menu-btn-ext";
     menuBtnCercleExt.classList.add("absolute");
     menuBtnCercleExt.src = imgMenuBtnCercleExt;
 
-    let menuBtnCercleInt = document.createElement('img');
+    const menuBtnCercleInt = document.createElement('img');
     menuBtnCercleInt.id = "menu-btn-int";
     menuBtnCercleInt.classList.add("absolute");
     menuBtnCercleInt.src = imgMenuBtnCercleInt;
 
-    let menuBtnCentre = document.createElement('img');
+    const menuBtnCentre = document.createElement('img');
     menuBtnCentre.id = "menu-btn-centre";
     menuBtnCentre.classList.add("absolute");
     menuBtnCentre.src = imgMenuBtnCentre;
@@ -31,27 +31,25 @@ const BoutonMenu = () => {
     let btnActivate = false;
 
     boutonMenu.addEventListener('click', function () {
-        let menu = document.getElementById("menu");
+        const menu = document.getElementById("menu");
 
-        if (btnActivate == false) {
-            menuBtnCercleExt.style.transform = 'rotate(300deg)';
-            menuBtnCercleExt.style.scale = 0.6;
-            menuBtnCercleInt.style.transform = 'rotate(-260deg)';
-            menuBtnCercleInt.style.scale = 1.4;
-            menuBtnCentre.style.transform = 'rotate(200deg)';
-            menuBtnCentre.style.scale = 0.5;
+        if (!btnActivate) {
+            menuBtnCercleExt.classList.add('rotate-scale-ext');
+            menuBtnCercleInt.classList.add('rotate-scale-int');
+            menuBtnCentre.classList.add('rotate-scale-centre');
+
             menu.style.top = 0;
-            menu.style.position = "fixed";
+            menu.classList.replace("absolute", "fixed");
+
             btnActivate = true
         } else {
-            menuBtnCercleExt.style.transform = 'rotate(0deg)';
-            menuBtnCercleExt.style.scale = 1;
-            menuBtnCercleInt.style.transform = 'rotate(0deg)';
-            menuBtnCercleInt.style.scale = 1;
-            menuBtnCentre.style.transform = 'rotate(0deg)';
-            menuBtnCentre.style.scale = 1;
+            menuBtnCercleExt.classList.remove('rotate-scale-ext');
+            menuBtnCercleInt.classList.remove('rotate-scale-int');
+            menuBtnCentre.classList.remove('rotate-scale-centre');
+
             menu.style.top = "-102vh";
-            menu.style.position = "absolute";
+            menu.classList.replace("fixed", "absolute");
+
             btnActivate = false
         }
 

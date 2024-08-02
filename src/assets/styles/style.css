@@ -12,14 +12,14 @@
 
     --title-font-family: "Kufam", sans-serif;
     --title-font-wheight: 600;
-    --title-font-size: 2rem;
+    --title-font-size: 2em;
 
-    --onglet-menu-font-size: 1.5rem;
+    --onglet-menu-font-size: 1.5em;
     --onglet-menu-font-wheight: 600;
-    --onglet-menu-text-shadow: 0 0 0.1rem rgba(var(--shadow-color), 1),
-        0 0 0.25rem rgba(var(--shadow-color), 0.9),
-        0 0 0.5rem rgba(var(--shadow-color), 0.7),
-        0 0 2rem rgba(var(--shadow-color), 0.5);
+    --onglet-menu-text-shadow: 0 0 0.1em rgba(var(--shadow-color), 1),
+        0 0 0.25em rgba(var(--shadow-color), 0.9),
+        0 0 0.5em rgba(var(--shadow-color), 0.7),
+        0 0 2em rgba(var(--shadow-color), 0.5);
 
     --banniere-img-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 1) 85%, rgba(255, 255, 255, 0) 100%);
     --banniere-logo-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 40%, rgba(255, 255, 255, 0.2) 100%);
@@ -34,8 +34,8 @@
     --bouton-menu-circulaire-pointer-event: none;
 
     --bouton-menu-classique-color: #ffffff;
-    --bouton-menu-classique-shadow: 0 0 0.2rem 0.1rem var(--shadow-color-fullrange);
-    --bouton-menu-classique-shadow-midrange: 0 0 0.2rem 0.1rem var(--shadow-color-midrange);
+    --bouton-menu-classique-shadow: 0 0 0.2em 0.1em var(--shadow-color-fullrange);
+    --bouton-menu-classique-shadow-midrange: 0 0 0.2em 0.1em var(--shadow-color-midrange);
 
 }
 
@@ -69,11 +69,6 @@ a {
     text-decoration: none;
 }
 
-/* Masquage de la barre de défilement */
-body::-webkit-scrollbar {
-    width: none;
-}
-
 /* style standard pour composants */
 .flex-row,
 .flex-row-responsive {
@@ -85,6 +80,10 @@ body::-webkit-scrollbar {
 .flex-column-responsive {
     display: flex;
     flex-direction: column;
+}
+
+.block {
+    display: block;
 }
 
 .center {

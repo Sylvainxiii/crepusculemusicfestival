@@ -23,6 +23,7 @@ const Banniere = () => {
   const sourcevideo = document.createElement('source');
   sourcevideo.src = teaser;
   sourcevideo.type = "video/mp4";
+  video.appendChild(sourcevideo);
 
   const imgBanniere = document.createElement('img');
   imgBanniere.id = "img-banniere";
@@ -34,7 +35,6 @@ const Banniere = () => {
   logoBanniere.classList.add("absolute");
   logoBanniere.src = logo;
 
-  video.appendChild(sourcevideo);
   videoContainer.appendChild(video);
   banniere.appendChild(videoContainer);
   banniere.appendChild(logoBanniere);

@@ -1,10 +1,10 @@
 /* bouton hamburger -------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .hamburger {
-    top: 1rem;
-    left: 1rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    top: 1em;
+    left: 1em;
+    width: 1.5em;
+    height: 1.5em;
     z-index: 20;
 }
 
@@ -13,15 +13,22 @@
     width: 100%;
     height: 10%;
     background-color: var(--bouton-menu-classique-color);
-    display: block;
-    border-radius: 0.25rem;
+    border-radius: 0.25em;
     transition: all 0.2s ease-in-out;
-    position: absolute;
+}
+
+
+#bar1,
+#bar4 {
+    box-shadow: var(--bouton-menu-classique-shadow);
 }
 
 #bar1 {
     top: 5%;
-    box-shadow: var(--bouton-menu-classique-shadow);
+}
+
+#bar4 {
+    bottom: 5%;
 }
 
 #bar2,
@@ -30,7 +37,26 @@
     box-shadow: var(--bouton-menu-classique-shadow-midrange);
 }
 
-#bar4 {
-    bottom: 5%;
+/* css transition des barres */
+
+#bar1.translate-right {
+    transform: translatex(2.5em);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#bar2.rotate-45 {
+    transform: rotate(45deg);
     box-shadow: var(--bouton-menu-classique-shadow);
+}
+
+#bar3.rotate-minus-45 {
+    transform: rotate(-45deg);
+    box-shadow: var(--bouton-menu-classique-shadow);
+}
+
+#bar4.translate-left {
+    transform: translatex(-2.5em);
+    background-color: transparent;
+    box-shadow: none;
 }

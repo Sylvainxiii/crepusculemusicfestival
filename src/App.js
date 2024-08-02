@@ -12,6 +12,7 @@ const App = () => {
     app.className = 'app';
 
     app.appendChild(BoutonMenuClassique());
+    // app.appendChild(BoutonMenu());
     app.appendChild(Menu());
     app.appendChild(Banniere());
     app.appendChild(AccueilInfo());

@@ -2,24 +2,23 @@ import "./OngletMenu.css";
 import dataMenu from "/data/menu.json"
 
 const OngletMenu = () => {
-    console.log(dataMenu);
 
     const ongletMenu = document.createElement('ul');
     ongletMenu.id = "liste-menu";
     ongletMenu.classList.add("flex-column")
 
-    for (let elmt in dataMenu) {
-        let line = document.createElement('li');
-        line.id = "line" + elmt;
+    dataMenu.forEach((item) => {
+        const line = document.createElement('li');
         line.classList.add("line-menu", "flex-row", "center");
-        let link = document.createElement('a');
+
+        const link = document.createElement('a');
         link.classList.add("link-menu");
-        link.id = "link" + elmt;
-        link.href = dataMenu[elmt]["link"];
-        link.textContent = dataMenu[elmt]["title"];
+        link.href = item.link;
+        link.textContent = item.title;
+
         line.appendChild(link);
         ongletMenu.appendChild(line);
-    }
+    })
 
     return ongletMenu;
 }
