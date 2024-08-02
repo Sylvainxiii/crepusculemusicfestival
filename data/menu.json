@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Crepuscule Music Festival",
+        "link": "/crepuscule"
+    },
+    {
+        "title": "Programmation",
+        "link": "/programmation"
+    },
+    {
+        "title": "Billetterie",
+        "link": "/billetterie"
+    },
+    {
+        "title": "Infos Pratiques",
+        "link": "/infos-pratiques"
+    },
+    {
+        "title": "Engagements",
+        "link": "/engagements"
+    },
+    {
+        "title": "Espace Partenaires",
+        "link": "/partenaires"
+    },
+    {
+        "title": "Drac Events",
+        "link": "/dracevents"
+    },
+    {
+        "title": "Contact",
+        "link": "/contact"
+    }
+]

@@ -2,6 +2,7 @@
     padding: 0;
     margin: auto;
     box-sizing: border-box;
+    border: 0;
 }
 
 body {
@@ -24,6 +25,16 @@ h1 {
 
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Personnaliser la barre de défilement (le curseur) */
 body::-webkit-scrollbar {
     width: none;
@@ -43,6 +54,7 @@ body::-webkit-scrollbar {
 
 .center {
     justify-content: center;
+    align-items: center;
 }
 
 .start {
