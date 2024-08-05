@@ -1,34 +1,56 @@
 [
     {
         "title": "Crepuscule Music Festival",
-        "link": "/crepuscule"
+        "path": "/crepuscule/",
+        "vue": "Crepuscule.js",
+        "module": "Crepuscule"
     },
     {
         "title": "Programmation",
-        "link": "/programmation"
+        "path": "/programmation/",
+        "vue": "Programmation.js",
+        "module": "Programmation"
     },
     {
         "title": "Billetterie",
-        "link": "/billetterie"
+        "path": "/billetterie/",
+        "vue": "Billetterie.js",
+        "module": "Billetterie"
     },
     {
         "title": "Infos Pratiques",
-        "link": "/infos-pratiques"
+        "path": "/infos-pratiques/",
+        "vue": "Info.js",
+        "module": "Info"
     },
     {
         "title": "Engagements",
-        "link": "/engagements"
+        "path": "/engagements/",
+        "vue": "Engagements.js",
+        "module": "Engagements"
     },
     {
         "title": "Espace Partenaires",
-        "link": "/partenaires"
+        "path": "/partenaires/",
+        "vue": "Partenaires.js",
+        "module": "Partenaires"
     },
     {
         "title": "Drac Events",
-        "link": "/dracevents"
+        "path": "/dracevents/",
+        "vue": "Drac.js",
+        "module": "Drac"
     },
     {
         "title": "Contact",
-        "link": "/contact"
+        "path": "/contact/",
+        "vue": "Contact.js",
+        "module": "Contact"
+    },
+    {
+        "title": "Retour à l'accueil",
+        "path": "/",
+        "vue": "Accueil.js",
+        "module": "Accueil"
     }
 ]

@@ -13,7 +13,7 @@ const OngletMenu = () => {
 
         const link = document.createElement('a');
         link.classList.add("link-menu");
-        link.href = item.link;
+        link.href = item.path;
         link.textContent = item.title;
 
         line.appendChild(link);
