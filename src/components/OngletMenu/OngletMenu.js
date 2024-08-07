@@ -12,7 +12,7 @@ const OngletMenu = () => {
         line.classList.add("line-menu", "flex-row", "center");
 
         const link = document.createElement('a');
-        link.classList.add("link-menu");
+        link.classList.add("link-menu", "navlink");
         link.href = item.path;
         link.textContent = item.title;
 

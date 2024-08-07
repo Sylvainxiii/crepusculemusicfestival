@@ -40,7 +40,7 @@ const App = () => {
 
     // Fonction qui permet de désactiver le comportement par défaut des liens (rechargement de page), d'affecter le nouveau chemin à la barre des taches et d'executer le rendu (handleLocation)
     const navigation = (event) => {
-        if (event.target.classList.contains("link-menu")) {
+        if (event.target.classList.contains("navlink")) {
             event.preventDefault();
             const newpath = event.target.href;
             window.history.pushState({}, newpath, newpath);
