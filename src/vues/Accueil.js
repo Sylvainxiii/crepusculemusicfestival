@@ -1,5 +1,4 @@
-import BoutonMenu from "../components/BoutonMenu/BoutonMenu.js";
-import BoutonMenuClassique from "../components/BoutonMenuClassique/BoutonMenuClassique.js";
+
 import Menu from "../components/Menu/Menu.js";
 import Banniere from "../components/Banniere/Banniere.js";
 import AccueilInfo from "../components/AccueilInfo/AccueilInfo.js";
@@ -9,8 +8,6 @@ import AccueilProgrammation from "../components/AccueilProgrammation/AccueiProgr
 
 const Accueil = (app) => {
 
-    app.appendChild(BoutonMenuClassique());
-    // app.appendChild(BoutonMenu());
     app.appendChild(Menu());
     app.appendChild(Banniere());
     app.appendChild(AccueilInfo());

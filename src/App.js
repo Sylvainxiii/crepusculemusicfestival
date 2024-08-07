@@ -4,7 +4,7 @@ import Contact from "./vues/Contact.js";
 import Crepuscule from "./vues/Crepuscule.js";
 import Drac from "./vues/Drac.js";
 import Engagements from "./vues/Engagements.js";
-import erreur404 from "./vues/erreur404.js";
+import erreur404 from "./vues/Erreur404.js";
 import Info from "./vues/Info.js";
 import Partenaires from "./vues/Partenaires.js";
 import Programmation from "./vues/Programmation.js";
