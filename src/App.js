@@ -4,7 +4,7 @@ import Contact from "./vues/Contact.js";
 import Crepuscule from "./vues/Crepuscule.js";
 import Drac from "./vues/Drac.js";
 import Engagements from "./vues/Engagements.js";
-import erreur404 from "./vues/Erreur404.js";
+import Erreur404 from "./vues/Erreur404.js";
 import Info from "./vues/Info.js";
 import Partenaires from "./vues/Partenaires.js";
 import Programmation from "./vues/Programmation.js";
@@ -35,7 +35,7 @@ const App = () => {
         app.innerHTML = ""
         if (Component) {
             Component(app);
-        } else { erreur404(app) }
+        } else { Erreur404(app) }
     }
 
     // Fonction qui permet de désactiver le comportement par défaut des liens (rechargement de page), d'affecter le nouveau chemin à la barre des taches et d'executer le rendu (handleLocation)
