@@ -21,7 +21,7 @@
         0 0 0.5em rgba(var(--shadow-color), 0.7),
         0 0 2em rgba(var(--shadow-color), 0.5);
 
-    --banniere-img-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 1) 85%, rgba(255, 255, 255, 0) 100%);
+    --banniere-img-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 1) 70%, rgba(255, 255, 255, 0) 90%);
     --banniere-logo-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 40%, rgba(255, 255, 255, 0.2) 100%);
 
     --shadow-color: 40, 187, 194;
