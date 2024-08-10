@@ -1,0 +1,8 @@
+#grille-partenaire {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgba(var(--shadow-color), 1);
+    gap: 0.4em;
+    padding: 0.4em;
+}

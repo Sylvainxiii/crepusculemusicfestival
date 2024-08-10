@@ -6,32 +6,32 @@
     ],
     "lineup": [
         {
-            "artist": "Petit Chat",
+            "artist": "Artiste 1",
             "social": "",
             "time": "22:00",
             "img": "./src/assets/lineupImg/"
         },
         {
-            "artist": "Keïlo",
-            "social": "https://www.instagram.com/keilo.music/",
+            "artist": "Artiste 2",
+            "social": "",
             "time": "23:00",
             "img": "./src/assets/lineupImg/"
         },
         {
-            "artist": "Dj Pat",
+            "artist": "Artiste 3",
             "social": "",
             "time": "21:00",
             "img": "./src/assets/lineupImg/"
         },
         {
-            "artist": "Bonaar",
-            "social": "https://www.instagram.com/bonaar/",
+            "artist": "Artiste 4",
+            "social": "",
             "time": "22:00",
             "img": "./src/assets/lineupImg/"
         },
         {
-            "artist": "Sebastien B",
-            "social": "https://www.instagram.com/djsebastien.b/",
+            "artist": "Artiste 5",
+            "social": "",
             "time": "23:00",
             "img": "./src/assets/lineupImg/"
         }

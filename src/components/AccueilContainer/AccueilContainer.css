@@ -5,6 +5,10 @@
     padding: 1rem;
 }
 
+.accueil-container h1 {
+    margin-bottom: 1em;
+}
+
 .accueil-container::after {
     content: "";
     position: absolute;
