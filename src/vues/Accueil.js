@@ -1,5 +1,3 @@
-
-import Menu from "../components/Menu/Menu.js";
 import Banniere from "../components/Banniere/Banniere.js";
 import AccueilInfo from "../components/AccueilInfo/AccueilInfo.js";
 import AccueilBilletterie from "../components/AccueilBilleterie/AccueiBilletterie.js";
@@ -8,7 +6,6 @@ import AccueilProgrammation from "../components/AccueilProgrammation/AccueiProgr
 
 const Accueil = (app) => {
 
-    app.appendChild(Menu());
     app.appendChild(Banniere());
     app.appendChild(AccueilInfo());
     app.appendChild(AccueilProgrammation());

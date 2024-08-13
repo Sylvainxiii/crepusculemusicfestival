@@ -1,3 +1,5 @@
+import Footer from "./components/Footer/Footer.js";
+import Menu from "./components/Menu/Menu.js";
 import Accueil from "./vues/Accueil.js";
 import Billetterie from "./vues/Billetterie.js";
 import Contact from "./vues/Contact.js";
@@ -36,6 +38,8 @@ const App = () => {
         if (Component) {
             Component(app);
         } else { Erreur404(app) }
+        app.appendChild(Menu());
+        app.appendChild(Footer());
     }
 
     // Fonction qui permet de désactiver le comportement par défaut des liens (rechargement de page), d'affecter le nouveau chemin à la barre des taches et d'executer le rendu (handleLocation)

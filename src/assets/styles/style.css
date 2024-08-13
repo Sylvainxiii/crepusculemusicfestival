@@ -12,7 +12,6 @@
 
     --title-font-family: "Days One", sans-serif;
     --title-font-wheight: 400;
-    --title-font-size: 2em;
 
     --texte-flashy-font-family: "Orbitron", sans-serif;
     --texte-flashy-font-wheight: 600;
@@ -60,11 +59,10 @@ body {
     overflow-x: hidden;
 }
 
-h1 {
+h1,
+h2 {
     font-family: var(--title-font-family);
     font-weight: var(--title-font-wheight);
-    font-size: var(--title-font-size);
-
 }
 
 /* suppression du style par défaut */
@@ -74,9 +72,12 @@ ul {
     padding: 0;
 }
 
-a {
+a,
+a:visited {
     text-decoration: none;
+    color: var(--main-font-color);
 }
+
 
 /* style standard pour composants */
 .flex-row,
