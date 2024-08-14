@@ -1,24 +1,24 @@
 .accueil-container {
     position: relative;
-    background-color: var(--menu-background-color);
-    margin: 1rem;
+    background-color: var(--container-background-color);
+    height: 100%;
+    width: 100%;
     padding: 1rem;
 }
 
 .accueil-container h1 {
-    margin-bottom: 1em;
+    margin: 0 0 1em 0;
 }
 
-.accueil-container::after {
+.border-accueil-container {
     content: "";
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
     width: calc(100% + 5px);
     height: calc(100% + 5px);
-    background-image: linear-gradient(90deg,
+    background-image: linear-gradient(to right bottom,
             rgb(var(--shadow-color)) 0%,
             transparent 50%,
             rgb(var(--shadow-color)) 100%);

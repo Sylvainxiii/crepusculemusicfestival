@@ -20,10 +20,13 @@ const AccueilProgrammation = () => {
 
 
     listeArtefacts.forEach(artefact => {
+        const containerIconeArtefact = document.createElement('div');
+        containerIconeArtefact.classList.add("container-artefact-accueil", "relative");
         const iconeArtefact = document.createElement('img');
         iconeArtefact.src = artefact;
-        iconeArtefact.classList.add("artefact-accueil");
-        programmationContainer.appendChild(iconeArtefact);
+        iconeArtefact.classList.add("artefact-accueil", "absolute");
+        containerIconeArtefact.appendChild(iconeArtefact);
+        programmationContainer.appendChild(containerIconeArtefact);
     })
 
 

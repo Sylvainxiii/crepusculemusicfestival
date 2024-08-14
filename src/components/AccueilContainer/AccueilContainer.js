@@ -9,6 +9,10 @@ const AccueilContainer = (id, text) => {
     titreAccueilContainer.textContent = text;
     accueilContainer.appendChild(titreAccueilContainer);
 
+    const borderAccueilContainer = document.createElement('div');
+    borderAccueilContainer.classList.add("border-accueil-container", "absolute");
+    accueilContainer.appendChild(borderAccueilContainer);
+
     return accueilContainer;
 }
 

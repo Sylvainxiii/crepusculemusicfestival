@@ -2,6 +2,14 @@
     gap: 5vw;
 }
 
-.artefact-accueil {
+.container-artefact-accueil {
     width: 15vw;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.artefact-accueil {
+    width: 100%;
+    transform: translateY(-50%);
+    top: 50%;
 }

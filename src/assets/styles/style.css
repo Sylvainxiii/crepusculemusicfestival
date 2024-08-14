@@ -37,6 +37,7 @@
     --shadow-color-midrange: rgba(var(--shadow-color), 0.35);
 
     --menu-background-color: rgba(0, 0, 0, 0.8);
+    --container-background-color: rgba(33, 39, 40, 1);
 
     --bouton-menu-circulaire-transition: transform 0.7s, scale 0.3s;
     --bouton-menu-circulaire-pointer-event: none;

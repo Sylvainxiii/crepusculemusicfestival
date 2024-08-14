@@ -1,12 +1,11 @@
 .bouton {
     padding: 0.5em 1em;
     color: rgba(var(--shadow-color), 1);
-    /* text-decoration: none; */
     text-transform: uppercase;
     overflow: hidden;
     transition: .5s;
-    margin-top: 1em;
-    letter-spacing: 0.2em
+    margin: 1em 0 0 0;
+    font-size: 0.8em;
 }
 
 .bouton:hover {

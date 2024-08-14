@@ -9,7 +9,7 @@ const AccueilBilletterie = () => {
 
     const accueilBilletterie = AccueilContainer(idTitreAccueilBilletterie, titreAccueilBilletterie);
     accueilBilletterie.id = "accueil-billetterie";
-    accueilBilletterie.classList.add("flex-column", "start");
+    accueilBilletterie.classList.add("flex-column", "space-between");
 
     const grilleBilletterie = document.createElement('div');
     grilleBilletterie.id = "grille-billetterie";

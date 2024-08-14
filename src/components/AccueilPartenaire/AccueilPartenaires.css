@@ -1,8 +1,27 @@
 #grille-partenaire {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
     background-color: rgba(var(--shadow-color), 1);
     gap: 0.4em;
     padding: 0.4em;
+}
+
+.logo-partenaire-accueil {
+    width: 15vw;
+}
+
+@media (width >=768px) {
+    #grille-partenaire {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        background-color: rgba(var(--shadow-color), 1);
+        gap: 0.4em;
+        padding: 0.4em;
+    }
+
+    .logo-partenaire-accueil {
+        width: 10vw;
+    }
 }
