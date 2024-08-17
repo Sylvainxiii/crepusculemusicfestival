@@ -31,32 +31,3 @@
     z-index: 3;
     mask-image: var(--banniere-logo-gradient-masque);
 }
-
-.texte-flashy-banniere {
-
-    z-index: 3;
-    color: transparent;
-    font-family: var(--texte-flashy-font-family);
-    font-weight: var(--texte-flashy-font-wheight);
-    font-size: var(--texte-flashy-font-size);
-    -webkit-text-stroke: var(--texte-flashy-text-shadow-size) rgba(var(--shadow-color), 1);
-}
-
-#date-banniere,
-#lieu-banniere {
-    position: absolute;
-}
-
-#date-banniere {
-    top: 70vw;
-    left: 8vw;
-}
-
-#date-banniere div {
-    margin-right: 0;
-}
-
-#lieu-banniere {
-    top: 75vw;
-    right: 12vw
-}

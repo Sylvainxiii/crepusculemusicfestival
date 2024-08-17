@@ -15,12 +15,12 @@
 
     --texte-flashy-font-family: "Orbitron", sans-serif;
     --texte-flashy-font-wheight: 600;
-    --texte-flashy-font-size: 3.8em;
+    --texte-flashy-font-size: 1.2em;
     --texte-flashy-text-shadow: var(--texte-flashy-text-shadow-size) var(--texte-flashy-text-shadow-size) 0 rgba(var(--shadow-color), 1),
         calc(var(--texte-flashy-text-shadow-size) * -1) var(--texte-flashy-text-shadow-size) 0 rgba(var(--shadow-color), 1),
         calc(var(--texte-flashy-text-shadow-size) * -1) calc(var(--texte-flashy-text-shadow-size) * -1) 0 rgba(var(--shadow-color), 1),
         var(--texte-flashy-text-shadow-size) calc(var(--texte-flashy-text-shadow-size) * -1) 0 rgba(var(--shadow-color), 1);
-    --texte-flashy-text-shadow-size: 4px;
+    --texte-flashy-text-shadow-size: 0.05em;
 
     --onglet-menu-font-size: 1.5em;
     --onglet-menu-font-wheight: 600;
