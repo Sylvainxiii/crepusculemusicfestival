@@ -10,12 +10,9 @@
 
 .bouton:hover {
     background: rgba(var(--shadow-color), 1);
-    color: #fff;
+    color: var(--main-font-color);
     border-radius: 0.25em;
-    box-shadow: 0 0 0.25em rgba(var(--shadow-color), 1),
-        0 0 1.2em rgba(var(--shadow-color), 1),
-        0 0 2em rgba(var(--shadow-color), 1),
-        0 0 4em rgba(var(--shadow-color), 1);
+    box-shadow: var(--bouton-box-shadow);
 }
 
 .bouton span:nth-child(1) {

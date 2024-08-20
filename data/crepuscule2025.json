@@ -1,39 +1,102 @@
 {
-    "festival": "Crepuscule Music Festival 2025",
-    "location": "Salle de Pratgraussal, rue de Lamothe, 81000 Albi",
-    "dates": [
-        "2025-03-25"
-    ],
-    "lineup": [
-        {
-            "artist": "Artiste 1",
-            "social": "",
-            "time": "22:00",
-            "img": "./src/assets/lineupImg/"
-        },
-        {
-            "artist": "Artiste 2",
-            "social": "",
-            "time": "23:00",
-            "img": "./src/assets/lineupImg/"
-        },
-        {
-            "artist": "Artiste 3",
-            "social": "",
-            "time": "21:00",
-            "img": "./src/assets/lineupImg/"
-        },
-        {
-            "artist": "Artiste 4",
-            "social": "",
-            "time": "22:00",
-            "img": "./src/assets/lineupImg/"
-        },
-        {
-            "artist": "Artiste 5",
-            "social": "",
-            "time": "23:00",
-            "img": "./src/assets/lineupImg/"
-        }
-    ]
+    "crepuscule": {
+        "titre": "Crepuscule Music Festival",
+        "path": "/crepuscule/",
+        "vue": "Crepuscule.js",
+        "module": "Crepuscule",
+        "titreh2": "Entrez dans l’irréel !",
+        "texte": "Le CRÉPUSCULE Music Festival offre une expérience visuelle unique à la frontière de l’imaginaire. Embarquez dans un show mêlant musique électronique, images et lumières transcendantes qui ne laisseront personnes indifférentes.",
+        "bouton": "En savoir Plus"
+    },
+    "billetterie": {
+        "titre": "Billetterie",
+        "path": "/billetterie/",
+        "vue": "Billetterie.js",
+        "module": "Billetterie",
+        "designation": "PASS CREPUSCULE MUSIC FESTIVAL",
+        "prix": "38€",
+        "bouton": "Acheter un billet"
+    },
+    "programmation": {
+        "titre": "Programmation",
+        "path": "/programmation/",
+        "vue": "Programmation.js",
+        "module": "Programmation",
+        "artistes": [
+            {
+                "artist": "Artiste 1",
+                "social": "",
+                "time": "22:00",
+                "img": "artefact1"
+            },
+            {
+                "artist": "Artiste 2",
+                "social": "",
+                "time": "23:00",
+                "img": "artefact2"
+            },
+            {
+                "artist": "Artiste 3",
+                "social": "",
+                "time": "21:00",
+                "img": "artefact3"
+            },
+            {
+                "artist": "Artiste 4",
+                "social": "",
+                "time": "22:00",
+                "img": "artefact4"
+            }
+        ]
+    },
+    "partenaires": {
+        "titre": "Partenaires",
+        "path": "/partenaires/",
+        "vue": "Partenaires.js",
+        "module": "Partenaires"
+    },
+    "info": {
+        "titre": "Infos Pratiques",
+        "path": "/infos-pratiques/",
+        "vue": "Info.js",
+        "module": "Info",
+        "festival": "Crepuscule Music Festival",
+        "location": "Salle de Pratgraussal, rue de Lamothe",
+        "CP": "81000",
+        "ville": "Albi",
+        "dates": "08 mars 2025"
+    },
+    "engagements": {
+        "titre": "Engagements",
+        "path": "/engagements/",
+        "vue": "Engagements.js",
+        "module": "Engagements"
+    },
+    "drac": {
+        "titre": "Drac Events",
+        "path": "/dracevents/",
+        "vue": "Drac.js",
+        "module": "Drac"
+    },
+    "contact": {
+        "titre": "Contact",
+        "path": "/contact/",
+        "vue": "Contact.js",
+        "module": "Contact",
+        "facebook": "https://www.facebook.com/profile.php?id=100092378724145",
+        "instagram": "https://www.instagram.com/drac_events/",
+        "email": "contact@drac-events.com",
+        "web": "https://www.drac-events.fr/"
+    },
+    "accueil": {
+        "titre": "Retour à l'accueil",
+        "path": "/",
+        "vue": "Accueil.js",
+        "module": "Accueil"
+    },
+    "footer": {
+        "reseauh2": "Suivez-nous!",
+        "contacth2": "Contact",
+        "accesh2": "Accéder au festival"
+    }
 }

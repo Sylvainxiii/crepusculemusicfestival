@@ -2,15 +2,18 @@ import "./BoutonMenuClassique.css";
 
 const BoutonMenuClassique = () => {
 
-    const boutonMenu = document.createElement('div');
-    boutonMenu.classList.add("hamburger", "fixed");
 
+    const fragment = document.createDocumentFragment();
     for (let i = 0; i < 4; i = i + 1) {
         const bar = document.createElement('span');
         bar.classList.add("bar", "absolute", "block");
         bar.id = `bar${i + 1}`;
-        boutonMenu.appendChild(bar);
+        fragment.appendChild(bar);
     }
+
+    const boutonMenu = document.createElement('div');
+    boutonMenu.classList.add("hamburger", "fixed");
+    boutonMenu.appendChild(fragment);
 
     let btnActivate = false;
 

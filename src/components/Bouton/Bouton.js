@@ -2,13 +2,12 @@ import "./Bouton.css";
 
 const Bouton = (texte, path) => {
 
-    const bouton = document.createElement('div');
-    bouton.classList.add("bouton", "relative", "inline-block");
 
+    const fragment = document.createDocumentFragment();
     for (let i = 0; i < 4; i = i + 1) {
         const spanBouton = document.createElement('span');
         spanBouton.classList.add("absolute", "block");
-        bouton.appendChild(spanBouton);
+        fragment.appendChild(spanBouton);
     }
 
     const textBouton = document.createElement('div');
@@ -16,8 +15,11 @@ const Bouton = (texte, path) => {
     lienBouton.textContent = texte;
     lienBouton.href = path;
     textBouton.appendChild(lienBouton);
-    bouton.appendChild(textBouton);
+    fragment.appendChild(textBouton);
 
+    const bouton = document.createElement('div');
+    bouton.classList.add("bouton", "relative", "inline-block");
+    bouton.appendChild(fragment);
     return bouton
 }
 

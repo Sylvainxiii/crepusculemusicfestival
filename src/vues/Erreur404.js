@@ -1,4 +1,4 @@
-import Erreur from "../components/Erreur/Erreur";
+import Erreur from "/src/components/Erreur/Erreur";
 
 const Erreur404 = (app) => {
 

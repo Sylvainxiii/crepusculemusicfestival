@@ -37,7 +37,7 @@
     --shadow-color-midrange: rgba(var(--shadow-color), 0.35);
 
     --menu-background-color: rgba(0, 0, 0, 0.8);
-    --container-background-color: rgba(33, 39, 40, 1);
+    --container-background-color: rgba(15, 30, 35, 1);
 
     --bouton-menu-circulaire-transition: transform 0.7s, scale 0.3s;
     --bouton-menu-circulaire-pointer-event: none;
@@ -46,10 +46,16 @@
     --bouton-menu-classique-shadow: 0 0 0.2em 0.1em var(--shadow-color-fullrange);
     --bouton-menu-classique-shadow-midrange: 0 0 0.2em 0.1em var(--shadow-color-midrange);
 
+    --bouton-box-shadow: 0 0 0.25em rgba(var(--shadow-color), 1),
+        0 0 1.2em rgba(var(--shadow-color), 1),
+        0 0 2em rgba(var(--shadow-color), 1),
+        0 0 4em rgba(var(--shadow-color), 1);
+
+    --footer-border-gradient: linear-gradient(0deg, rgba(var(--shadow-color), 0) 0%, rgba(var(--shadow-color), 1) 40%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%)
 }
 
 body {
-    background-image: url("/src/assets/images/fond-body.jpg");
+    background-image: url("/src/assets/images/fond-body.webp");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

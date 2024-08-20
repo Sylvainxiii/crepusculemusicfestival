@@ -1,15 +1,15 @@
-import Footer from "./components/Footer/Footer.js";
-import Menu from "./components/Menu/Menu.js";
-import Accueil from "./vues/Accueil.js";
-import Billetterie from "./vues/Billetterie.js";
-import Contact from "./vues/Contact.js";
-import Crepuscule from "./vues/Crepuscule.js";
-import Drac from "./vues/Drac.js";
-import Engagements from "./vues/Engagements.js";
-import Erreur404 from "./vues/Erreur404.js";
-import Info from "./vues/Info.js";
-import Partenaires from "./vues/Partenaires.js";
-import Programmation from "./vues/Programmation.js";
+import Footer from "/src/components/Footer/Footer.js";
+import Menu from "/src/components/Menu/Menu.js";
+import Accueil from "/src/vues/Accueil.js";
+import Billetterie from "/src/vues/Billetterie.js";
+import Contact from "/src/vues/Contact.js";
+import Crepuscule from "/src/vues/Crepuscule.js";
+import Drac from "/src/vues/Drac.js";
+import Engagements from "/src/vues/Engagements.js";
+import Erreur404 from "/src/vues/Erreur404.js";
+import Info from "/src/vues/Info.js";
+import Partenaires from "/src/vues/Partenaires.js";
+import Programmation from "/src/vues/Programmation.js";
 
 
 const App = () => {

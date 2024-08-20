@@ -1,12 +1,12 @@
 import "./AccueilContainer.css";
 
-const AccueilContainer = (id, text) => {
+const AccueilContainer = (id, titre) => {
     const accueilContainer = document.createElement('div');
-    accueilContainer.className = "accueil-container";
+    accueilContainer.classList.add("accueil-container", "relative");
 
     const titreAccueilContainer = document.createElement('h1');
     titreAccueilContainer.id = id;
-    titreAccueilContainer.textContent = text;
+    titreAccueilContainer.textContent = titre;
     accueilContainer.appendChild(titreAccueilContainer);
 
     const borderAccueilContainer = document.createElement('div');

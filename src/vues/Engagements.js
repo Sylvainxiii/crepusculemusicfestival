@@ -1,16 +1,18 @@
-import AccueilContainer from "../components/AccueilContainer/AccueilContainer.js";
-
+import AccueilContainer from "/src/components/AccueilContainer/AccueilContainer.js";
+import { engagements } from "/data/crepuscule2025.json";
 
 const Engagements = (app) => {
 
-    const idTitreAccueilEngagements = "titre-accueil-engagements";
-    const titreAccueilEngagements = "ENGAGEMENTS";
+    const idTitreAccueilEngagements = "titre-engagements";
+    const titreAccueilEngagements = engagements["titre"];
 
+    const fragment = document.createDocumentFragment();
     const accueilEngagements = AccueilContainer(idTitreAccueilEngagements, titreAccueilEngagements);
-    accueilEngagements.id = "accueil-engagements";
+    accueilEngagements.id = "engagements";
     accueilEngagements.classList.add("flex-column", "start")
-    app.appendChild(accueilEngagements);
+    fragment.appendChild(accueilEngagements);
 
+    app.appendChild(fragment);
 
     return app;
 };

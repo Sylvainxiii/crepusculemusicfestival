@@ -1,21 +1,19 @@
 import './Banniere.css';
 import teaser from "/src/assets/video/teaser.mp4";
-import img from "/src/assets/images/fond-accueil.png";
+import img from "/src/assets/images/fond-accueil.webp";
 import logo from "/src/assets/images/logo.svg";
-import EncartDate from '../EncartDate/EncartDate';
+import EncartDate from '/src/components/EncartDate/EncartDate';
 
 const Banniere = () => {
-  const banniere = document.createElement('div');
-  banniere.id = 'banniere'
-  banniere.classList.add("relative");
 
+  const fragment = document.createDocumentFragment();
   const videoContainer = document.createElement('div');
   videoContainer.id = "container-video-banniere";
-  videoContainer.classList.add("relative");
+  videoContainer.className = "relative";
 
   const video = document.createElement('video');
   video.id = "video-banniere";
-  video.classList.add("absolute");
+  video.className = "absolute";
   video.muted = true;
   video.autoplay = true;
   video.playsInline = true;
@@ -29,19 +27,25 @@ const Banniere = () => {
   const imgBanniere = document.createElement('img');
   imgBanniere.id = "img-banniere";
   imgBanniere.src = img;
-  imgBanniere.classList.add("absolute");
+  imgBanniere.className = "absolute";
+  imgBanniere.alt = "Crepuscule Music Festival ALBI"
 
   const logoBanniere = document.createElement('img');
   logoBanniere.id = "logo-banniere";
-  logoBanniere.classList.add("absolute");
+  logoBanniere.className = "absolute";
   logoBanniere.src = logo;
+  logoBanniere.alt = "Crepuscule Music Festival logo"
 
   videoContainer.appendChild(video);
-  banniere.append(EncartDate())
-  banniere.appendChild(videoContainer);
-  banniere.appendChild(logoBanniere);
-  banniere.appendChild(imgBanniere);
+  fragment.append(EncartDate())
+  fragment.appendChild(videoContainer);
+  fragment.appendChild(logoBanniere);
+  fragment.appendChild(imgBanniere);
 
+  const banniere = document.createElement('div');
+  banniere.id = 'banniere'
+  banniere.className = "relative";
+  banniere.appendChild(fragment);
   return banniere;
 }
 

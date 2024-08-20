@@ -1,24 +1,30 @@
 import "./OngletMenu.css";
-import dataMenu from "/data/menu.json"
+import data from "/data/crepuscule2025.json"
 
 const OngletMenu = () => {
 
+    const fragment = document.createDocumentFragment();
+
+    for (let onglet in data) {
+
+        if (onglet !== "footer") {
+            const line = document.createElement('li');
+            line.classList.add("line-menu", "flex-row", "center");
+
+            const link = document.createElement('a');
+            link.classList.add("link-menu", "navlink");
+            link.href = data[onglet]["path"];
+            link.textContent = data[onglet]["titre"];
+
+            line.appendChild(link);
+            fragment.appendChild(line);
+        }
+    }
+
     const ongletMenu = document.createElement('ul');
     ongletMenu.id = "liste-menu";
-    ongletMenu.classList.add("flex-column")
-
-    dataMenu.forEach((item) => {
-        const line = document.createElement('li');
-        line.classList.add("line-menu", "flex-row", "center");
-
-        const link = document.createElement('a');
-        link.classList.add("link-menu", "navlink");
-        link.href = item.path;
-        link.textContent = item.title;
-
-        line.appendChild(link);
-        ongletMenu.appendChild(line);
-    })
+    ongletMenu.className = "flex-column";
+    ongletMenu.appendChild(fragment);
 
     return ongletMenu;
 }

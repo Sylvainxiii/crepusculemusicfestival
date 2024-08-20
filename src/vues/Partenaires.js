@@ -1,14 +1,18 @@
-import AccueilContainer from "../components/AccueilContainer/AccueilContainer.js";
+import AccueilContainer from "/src/components/AccueilContainer/AccueilContainer.js";
+import { partenaires } from "/data/crepuscule2025.json";
 
 const Partenaires = (app) => {
 
-    const idTitreAccueilPartenaires = "titre-accueil-partenaires";
-    const titreAccueilPartenaires = "PARTENAIRES";
+    const idTitreAccueilPartenaires = "titre-partenaires";
+    const titreAccueilPartenaires = partenaires["titre"];
 
+    const fragment = document.createDocumentFragment();
     const accueilPartenaires = AccueilContainer(idTitreAccueilPartenaires, titreAccueilPartenaires);
-    accueilPartenaires.id = "accueil-partenaires";
+    accueilPartenaires.id = "partenaires";
     accueilPartenaires.classList.add("flex-column", "start")
-    app.appendChild(accueilPartenaires);
+    fragment.appendChild(accueilPartenaires);
+
+    app.appendChild(fragment);
 
     return app;
 };

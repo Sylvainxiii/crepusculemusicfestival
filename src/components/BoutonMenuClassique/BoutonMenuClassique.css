@@ -9,7 +9,6 @@
 }
 
 .hamburger .bar {
-    padding: 0;
     width: 100%;
     height: 10%;
     background-color: var(--bouton-menu-classique-color);
@@ -39,24 +38,31 @@
 
 /* css transition des barres */
 
-#bar1.translate-right {
-    transform: translatex(2.5em);
+
+#bar1.translate-right,
+#bar4.translate-left {
     background-color: transparent;
     box-shadow: none;
+
 }
 
-#bar2.rotate-45 {
-    transform: rotate(45deg);
-    box-shadow: var(--bouton-menu-classique-shadow);
-}
-
-#bar3.rotate-minus-45 {
-    transform: rotate(-45deg);
-    box-shadow: var(--bouton-menu-classique-shadow);
+#bar1.translate-right {
+    transform: translatex(2.5em);
 }
 
 #bar4.translate-left {
     transform: translatex(-2.5em);
-    background-color: transparent;
-    box-shadow: none;
+}
+
+#bar2.rotate-45,
+#bar3.rotate-minus-45 {
+    box-shadow: var(--bouton-menu-classique-shadow);
+}
+
+#bar2.rotate-45 {
+    transform: rotate(45deg);
+}
+
+#bar3.rotate-minus-45 {
+    transform: rotate(-45deg);
 }

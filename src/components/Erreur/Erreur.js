@@ -2,14 +2,11 @@ import "./Erreur.css";
 
 const Erreur = () => {
 
-    const erreur = document.createElement('div');
-    erreur.id = "erreur";
-    erreur.classList.add("flex-column", "center");
-
+    const fragment = document.createDocumentFragment();
     const containerErreur = document.createElement('div');
     containerErreur.id = "container-erreur";
     containerErreur.classList.add("flex-column", "center");
-    erreur.appendChild(containerErreur);
+    fragment.appendChild(containerErreur);
 
     const titreErreur = document.createElement('div');
     titreErreur.id = "titre-404";
@@ -28,8 +25,10 @@ const Erreur = () => {
     link.textContent = "Accueil";
     containerErreur.appendChild(link);
 
-
-
+    const erreur = document.createElement('div');
+    erreur.id = "erreur";
+    erreur.classList.add("flex-column", "center");
+    erreur.appendChild(fragment);
 
     return erreur;
 }
