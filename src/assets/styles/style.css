@@ -5,15 +5,31 @@
     border: 0;
 }
 
+@font-face {
+    font-family: "Oppossum";
+    src: url('/src/assets/fonts/oposs___.ttf');
+}
+
+@font-face {
+    font-family: "Locust";
+    src: url('/src/assets/fonts/Locust.ttf');
+}
+
+@font-face {
+    font-family: "Xirod";
+    src: url('/src/assets/fonts/Xirod.otf');
+}
+
+
 :root {
     --main-font-color: #ffffff;
-    --main-font-family: "Merriweather Sans", sans-serif;
+    --main-font-family: "Oppossum", sans-serif;
     --main-font-size: 14px;
 
-    --title-font-family: "Days One", sans-serif;
+    --title-font-family: "Xirod";
     --title-font-wheight: 400;
 
-    --texte-flashy-font-family: "Orbitron", sans-serif;
+    --texte-flashy-font-family: "Xirod", sans-serif;
     --texte-flashy-font-wheight: 600;
     --texte-flashy-font-size: 1.2em;
     --texte-flashy-text-shadow: var(--texte-flashy-text-shadow-size) var(--texte-flashy-text-shadow-size) 0 rgba(var(--shadow-color), 1),

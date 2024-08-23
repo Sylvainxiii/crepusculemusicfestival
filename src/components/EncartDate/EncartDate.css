@@ -12,12 +12,11 @@
 }
 
 .encart-date div {
-    color: transparent;
+    color: rgba(var(--shadow-color), 1);
     text-transform: uppercase;
     font-family: var(--texte-flashy-font-family);
     font-weight: var(--texte-flashy-font-wheight);
     font-size: var(--texte-flashy-font-size);
-    -webkit-text-stroke: var(--texte-flashy-text-shadow-size) rgba(var(--shadow-color), 1);
 }
 
 .encart-date::after {
