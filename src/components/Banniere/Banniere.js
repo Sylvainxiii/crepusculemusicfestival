@@ -2,7 +2,6 @@ import './Banniere.css';
 import teaser from "/src/assets/video/teaser.mp4";
 import img from "/src/assets/images/fond-accueil.webp";
 import logo from "/src/assets/images/logo.svg";
-import EncartDate from '/src/components/EncartDate/EncartDate';
 
 const Banniere = () => {
 
@@ -37,7 +36,6 @@ const Banniere = () => {
   logoBanniere.alt = "Crepuscule Music Festival logo"
 
   videoContainer.appendChild(video);
-  fragment.append(EncartDate())
   fragment.appendChild(videoContainer);
   fragment.appendChild(logoBanniere);
   fragment.appendChild(imgBanniere);

@@ -1,5 +1,6 @@
 import Footer from "/src/components/Footer/Footer.js";
 import Menu from "/src/components/Menu/Menu.js";
+import EncartDate from "/src/components/EncartDate/EncartDate.js"
 import Accueil from "/src/vues/Accueil.js";
 import Billetterie from "/src/vues/Billetterie.js";
 import Contact from "/src/vues/Contact.js";
@@ -15,7 +16,7 @@ import Programmation from "/src/vues/Programmation.js";
 const App = () => {
 
     const app = document.createElement('div');
-    app.className = 'app';
+    app.classList.add('app', "flex-column", "space-between");
 
 
     const routes = {
@@ -38,6 +39,7 @@ const App = () => {
         if (Component) {
             Component(app);
         } else { Erreur404(app) }
+        app.appendChild(EncartDate())
         app.appendChild(Menu());
         app.appendChild(Footer());
     }

@@ -6,7 +6,26 @@
         "module": "Crepuscule",
         "titreh2": "Entrez dans l’irréel !",
         "texte": "Le CRÉPUSCULE Music Festival offre une expérience visuelle unique à la frontière de l’imaginaire. Embarquez dans un show mêlant musique électronique, images et lumières transcendantes qui ne laisseront personnes indifférentes.",
-        "bouton": "En savoir Plus"
+        "bouton": "En savoir Plus",
+        "page": {
+            "titreh2": "Le crepuscule music festival",
+            "paragraphe1": {
+                "titreh3": "Le concept",
+                "paragraphe": "Nouvel acteur de la scène électro en France, le CRÉPUSCULE Music Festival célèbre la diversité artistique tout en soutenant les talents émergents. L'objectif de ce festival est de rassembler les amateurs de musique électronique dans une atmosphère vibrante et festive, tout en promouvant la scène musicale indépendante."
+            },
+            "paragraphe2": {
+                "titreh3": "Un engagement musical",
+                "paragraphe": "Le CRÉPUSCULE Music Festival met avant des artistes reconnus dans l’univers de la musique électronique, tout en soutenant des artistes émergeants de la scène locale albigeoise. Cette volonté de célébrer la diversité artistique est un des piliers du festival."
+            },
+            "paragraphe3": {
+                "titreh3": "Une expérience visuelle unique",
+                "paragraphe": "Le festival se démarque en proposant un véritable show son et lumière transcendant. En s’appuyant sur des experts dans le domaine des expériences immersives, le CRÉPUSCULE Music Festival se vit aussi bien avec les yeux qu’avec les oreilles."
+            },
+            "paragraphe4": {
+                "titreh3": "L’origine du festival",
+                "paragraphe": "Ce festival est propulsé par l’association DRAC Events, dédiée à la promotion de la musique électronique. Organisatrice de plusieurs événements autour de la musique électronique à Albi, l’association souhaite apporter son soutien aux jeunes artistes émergeants de la région qui œuvrent pour la musique électronique, et leur permettre de se produire aux côtés d’artistes confirmés."
+            }
+        }
     },
     "billetterie": {
         "titre": "Billetterie",
