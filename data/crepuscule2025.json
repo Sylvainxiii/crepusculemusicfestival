@@ -86,10 +86,65 @@
         "dates": "08 mars 2025"
     },
     "engagements": {
-        "titre": "Engagements",
+        "titre": "Nos Engagements",
         "path": "/engagements/",
         "vue": "Engagements.js",
-        "module": "Engagements"
+        "module": "Engagements",
+        "page": {
+            "titreh2": "Nos Engagements",
+            "epilogue": "Sensible aux défis sociétaux et environnementaux contemporains, l’équipe du CRÉPUSCULE Music Festival a, dès sa création, entrepris une réflexion visant à devenir un acteur du changement. Nous nous engageons à gérer les impacts du festival tout en l'inscrivant dans une dynamique de transition écologique et sociale. Grâce à cette volonté et à l'implication de nos équipes, cette édition du CMF se veut responsable et engagée, en s'inscrivant dans un processus d'amélioration continue.",
+            "paragraphes": {
+                "paragraphe1": {
+                    "titreh3": "Accessibilité",
+                    "liste1": {
+                        "titreliste": "Mobilité",
+                        "ligne1": "Accès au festival via transports en commun ?",
+                        "ligne2": "Présence d’un parking PMR ?"
+                    },
+                    "liste2": {
+                        "titreliste": "Accueil",
+                        "ligne1": "Bénévoles formés pour l’accueil de personnes en situation de handicap ?",
+                        "ligne2": "Point info handi-accueil ?"
+                    },
+                    "liste3": {
+                        "titreliste": "Site",
+                        "ligne1": "terrain accessible aux personnes à mobilité réduite",
+                        "ligne2": "sanitaires adaptés",
+                        "ligne3": "files prioritaires à l’entrée du festival (à droite) et au niveau des bars",
+                        "ligne4": "plateforme surélevée, sécurisée et accessible à tout moment aux personnes à besoins spécifiques"
+                    },
+                    "liste4": {
+                        "titreliste": "L’accès à la plateforme est possible pour :",
+                        "ligne1": "les personnes en situation de handicap (justificatif CMI)",
+                        "ligne2": "les personnes avec une mobilité réduite temporaire (déplacement avec  béquilles, station debout difficile…). Présentation d’un justificatif médical si possible",
+                        "ligne3": "les femmes enceintes (dans la limite des places disponibles)",
+                        "ligne4": "un accompagnant par personne (dans la limite des places disponibles)"
+                    }
+                },
+                "paragraphe2": {
+                    "titreh3": "Prévention",
+                    "paragraphe": "La prévention des risques festifs fait partie intégrante des engagements du CRÉPUSCULE Music Festival qui entend sensibiliser ses festivalier.es et prévenir les risques liés à l’environnement festif : écoute de musique amplifiée, alcool, drogue…",
+                    "liste1": {
+                        "titreliste": "Quelques rappels:",
+                        "ligne1": "protège tes oreilles",
+                        "ligne2": "fais des pauses",
+                        "ligne3": "bois de l’eau",
+                        "ligne4": "conduis sobre",
+                        "ligne5": "respecte les lieux",
+                        "ligne6": "respecte les autres festivalier.es",
+                        "ligne7": "aucune violence ne sera tolérée sur le festival : racisme, sexisme, LGBTIphobie…"
+                    }
+                },
+                "paragraphe3": {
+                    "titreh3": "ÉCO-RESPONSABILITÉ",
+                    "liste1": {
+                        "titreliste": "Le CREPUSCULE Music Festival s’engage pour réduire son impact environnemental à travers des actions concrètes :",
+                        "ligne1": "Restriction du plastique à usage unique : gobelets réutilisables, foodtrucks…",
+                        "ligne2": "Tri sélectif et revalorisation des déchets"
+                    }
+                }
+            }
+        }
     },
     "drac": {
         "titre": "Drac Events",

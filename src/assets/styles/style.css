@@ -79,6 +79,7 @@ body {
     background-position: top right;
     color: var(--main-font-color);
     font-family: var(--main-font-family);
+    letter-spacing: 0.2em;
     font-size: var(--main-font-size);
     overflow-x: hidden;
 }
