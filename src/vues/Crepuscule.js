@@ -1,7 +1,7 @@
 import "./Crepuscule.css"
-import PageTitre from "/src/components/PageTitre/PageTitre.js";
-import VueContainer from "/src/components/VueContainer copy/VueContainer";
+import VueContainer from "/src/components/VueContainer/VueContainer";
 import { crepuscule } from "/data/crepuscule2025.json";
+import VueTitre from "/src/components/VueTitre/VueTitre";
 const page = crepuscule["page"];
 
 const Crepuscule = (app) => {
@@ -9,9 +9,9 @@ const Crepuscule = (app) => {
     const titreAccueilInfo = page["titreh2"];
 
     const fragment = document.createDocumentFragment();
-    const pageTitre = PageTitre(titreAccueilInfo);
-    pageTitre.classList.add("flex-column", "center")
-    fragment.appendChild(pageTitre);
+    const vueTitre = VueTitre(titreAccueilInfo);
+    vueTitre.classList.add("flex-column", "center")
+    fragment.appendChild(vueTitre);
 
     const contenu = VueContainer();
 

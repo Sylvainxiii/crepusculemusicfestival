@@ -1,6 +1,6 @@
 import "./Engagements.css"
-import PageTitre from "/src/components/PageTitre/PageTitre.js";
-import VueContainer from "/src/components/VueContainer copy/VueContainer";
+import VueTitre from "/src/components/VueTitre/VueTitre.js";
+import VueContainer from "/src/components/VueContainer/VueContainer";
 import { engagements } from "/data/crepuscule2025.json";
 const page = engagements["page"];
 const paragraphes = page["paragraphes"]
@@ -10,9 +10,9 @@ const Engagements = (app) => {
     const titreEngagements = page["titreh2"];
 
     const fragment = document.createDocumentFragment();
-    const pageTitre = PageTitre(titreEngagements);
-    pageTitre.classList.add("flex-column", "center")
-    fragment.appendChild(pageTitre);
+    const vueTitre = VueTitre(titreEngagements);
+    vueTitre.classList.add("flex-column", "center")
+    fragment.appendChild(vueTitre);
 
     const contenu = VueContainer();
     fragment.appendChild(contenu);

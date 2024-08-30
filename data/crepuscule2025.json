@@ -83,7 +83,51 @@
         "location": "Salle de Pratgraussal, rue de Lamothe",
         "CP": "81000",
         "ville": "Albi",
-        "dates": "08 mars 2025"
+        "dates": "08 mars 2025",
+        "page": {
+            "paragraphe1": {
+                "titreh3": "horaires",
+                "sousparagraphe": "Ouverture et fermeture du festival",
+                "timetable": "Timetable du samedi 8 mars"
+            },
+            "paragraphe2": {
+                "titreh3": "billetterie",
+                "faq": {
+                    "question1": {
+                        "question": "Où acheter mes billets?",
+                        "reponse": "Sur la billetterie officielle de l’événement :"
+                    },
+                    "question2": {
+                        "question": "Réception des billets",
+                        "reponse": "Une fois votre achat finalisé, vous recevrez par mail une confirmation de commande"
+                    },
+                    "question3": {
+                        "question": "Problème avec ma commande",
+                        "reponse": "Merci d’adresser un mail avec votre réclamation à"
+                    },
+                    "question4": {
+                        "question": "Revente de billets",
+                        "reponse": "Ne publiez pas le code-barres ou le numéro de votre billet sur les réseaux sociaux afin de réduire le risque de contrefaçon. N’achetez pas vos billets auprès d’un inconnu ou sur des sites de revente non autorisés (Facebook, Snapchat, Leboncoin…), vous risqueriez de ne pas pouvoir accéder au festival."
+                    },
+                    "question5": {
+                        "question": "Accès enfants/ados",
+                        "reponse": "L’accès au festival est interdit au moins de 18 ans."
+                    },
+                    "question6": {
+                        "question": "Annulation - Échange - Remboursement",
+                        "reponse": "Conformément à l’article L.221-28 du Code de la Consommation, les Billets ne font pas l’objet d’un droit de rétractation dès lors que la commande est exécutée par l’envoi du mail de confirmation. Un Billet ne peut être remboursé même en cas de perte, de vol ou de maladie, ni repris, ni échangé sauf en cas d’annulation de l’Événement. En cas d’annulation de l’Événement, seul le prix du Billet sera remboursé (les frais de location et d’émission restant à la charge définitive du Client). Ce remboursement n’interviendra qu’en faveur de l’acquéreur initial contre remise du Billet.<br>Un artiste a annulé sa présence au festival : En cas d’annulation d’un artiste, qui n’est pas imputable à l’Organisation du Festival, aucun remboursement et aucun échange ne seront proposés. Les billets ne sont ni repris, ni échangés sauf en cas de report ou d’annulation du festival dans sa totalité. En effet, en cas d’annulation d’un ou plusieurs artistes en deçà de la moitié du programme, les organisateurs ne sont pas obligés contractuellement de procéder à un échange ou remboursement.<br>En cas d’annulation totale du programme, l’organisateur s’engage alors à rembourser le client."
+                    },
+                    "question7": {
+                        "question": "Festivaliers en situation de handicap",
+                        "reponse": "A définir"
+                    },
+                    "question8": {
+                        "question": "Jeux concours",
+                        "reponse": "D’après la loi n° 64-1360 du 31 décembre 1964, l’exploitation de la marque CRÉPUSCULE Music Festival, visant à faire gagner ces places sans l’accord de l’organisation, est strictement interdite. Cette réglementation implique toutes formes de jeux type concours, tombola, loterie ou autre dispositif équivalant."
+                    }
+                }
+            }
+        }
     },
     "engagements": {
         "titre": "Nos Engagements",

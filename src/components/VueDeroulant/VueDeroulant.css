@@ -1,0 +1,9 @@
+.deroulant-visible {
+    font-weight: 600;
+}
+
+.deroulant-cache {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.4s linear;
+}

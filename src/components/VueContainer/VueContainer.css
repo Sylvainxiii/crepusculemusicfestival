@@ -9,3 +9,7 @@
     margin-bottom: 2em;
     text-decoration: underline;
 }
+
+.vue-container div div {
+    margin-left: 2em;
+}
