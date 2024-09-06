@@ -1,6 +1,7 @@
 import Banniere from "/src/components/Banniere/Banniere.js";
 import AccueilGrille from "/src/components/AccueilGrille/AccueilGrille.js";
-import AccueilInfo from "../components/AccueilInfo/AccueilInfo";
+import AccueilInfo from "/src/components/AccueilInfo/AccueilInfo";
+import AccueilBilletterie from "/src/components/AccueilBilleterie/AccueilBilletterie";
 
 const Accueil = (app) => {
 
@@ -8,6 +9,8 @@ const Accueil = (app) => {
     fragment.appendChild(Banniere());
     fragment.appendChild(AccueilInfo());
     fragment.appendChild(AccueilGrille());
+    fragment.appendChild(AccueilBilletterie());
+
 
     app.appendChild(fragment);
 

@@ -22,10 +22,6 @@
         z-index: 3;
     }
 
-    #accueil-billetterie {
-        grid-area: 1 / 5 / 2 / 6;
-    }
-
     #accueil-programmation {
         grid-area: 2 / 1 / 3/ 6;
     }

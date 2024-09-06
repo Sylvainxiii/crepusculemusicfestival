@@ -1,3 +1,8 @@
+#accueil-billetterie {
+    width: 60%;
+    gap: 1em
+}
+
 #grille-billetterie {
     display: grid;
     grid-template-columns: auto;
@@ -11,7 +16,7 @@
 #cellule-1-billetterie,
 #cellule-2-billetterie,
 #cellule-3-billetterie {
-    background-color: var(--menu-background-color);
+    background-color: var(--accueil-container-background-color);
     text-align: center;
     width: 100%;
     height: 100%;

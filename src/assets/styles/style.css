@@ -37,7 +37,7 @@
     --shadow-color-fullrange: rgba(var(--shadow-color), 0.7);
     --shadow-color-midrange: rgba(var(--shadow-color), 0.35);
 
-    --menu-background-color: rgba(0, 0, 0, 0.8);
+    --menu-background-color: rgba(15, 30, 35, 0.8);
     --accueil-container-background-color: rgba(15, 30, 35, 1);
     --vue-container-background-color: rgba(15, 30, 35, 0.7);
 

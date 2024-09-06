@@ -1,10 +1,4 @@
 #accueil-info {
     width: 50%;
-}
-
-
-#accueil-info h1,
-#accueil-info h2,
-#accueil-info div {
-    margin-bottom: 0.8em;
+    gap: 1em
 }
