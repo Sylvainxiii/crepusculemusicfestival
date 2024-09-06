@@ -1,19 +1,12 @@
-import AccueilPartenaires from "/src/components/AccueilPartenaire/AccueilPartenaires.js";
+
 import AccueilProgrammation from "/src/components/AccueilProgrammation/AccueilProgrammation.js";
-import AccueilContainer from "/src/components/AccueilContainer/AccueilContainer.js";
+
 import "./AccueilGrille.css";
 
 const AccueilGrille = () => {
 
     const fragment = document.createDocumentFragment();
     fragment.appendChild(AccueilProgrammation());
-
-    const containerVide = AccueilContainer("", "");
-    containerVide.id = "container-vide";
-    containerVide.classList.add("flex-column", "center");
-    fragment.appendChild(containerVide);
-
-    fragment.appendChild(AccueilPartenaires());
 
     const accueilGrille = document.createElement('div');
     accueilGrille.id = "grille-accueil";

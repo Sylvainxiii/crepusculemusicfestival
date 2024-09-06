@@ -15,7 +15,6 @@ const AccueilBilletterie = () => {
     const fragment = document.createDocumentFragment();
 
     const titre = document.createElement('h1');
-    titre.id = "titre-accueil-billetterie";
     titre.innerText = titreAccueilBilletterie;
     fragment.appendChild(titre);
 
