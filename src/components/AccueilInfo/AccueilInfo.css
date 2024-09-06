@@ -1,9 +1,10 @@
-#accroche-accueil-info,
-#texte-accueil-info {
-    margin-bottom: 2em;
+#accueil-info {
+    width: 50%;
 }
 
-#accroche-accueil-info {
-    font-size: 1.3em;
-    font-weight: 800;
+
+#accueil-info h1,
+#accueil-info h2,
+#accueil-info div {
+    margin-bottom: 0.8em;
 }

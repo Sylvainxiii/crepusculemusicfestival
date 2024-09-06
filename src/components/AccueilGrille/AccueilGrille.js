@@ -8,7 +8,6 @@ import "./AccueilGrille.css";
 const AccueilGrille = () => {
 
     const fragment = document.createDocumentFragment();
-    fragment.appendChild(AccueilInfo());
     fragment.appendChild(AccueilBilletterie());
     fragment.appendChild(AccueilProgrammation());
 

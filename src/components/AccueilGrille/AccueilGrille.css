@@ -22,28 +22,6 @@
         z-index: 3;
     }
 
-    #accueil-info {
-        grid-area: 1 / 1 / 2 / 5;
-
-    }
-
-    #accueil-info::before {
-        content: "";
-        position: absolute;
-        background-color: inherit;
-        bottom: -3.6em;
-        left: 0;
-        width: 30vw;
-        height: 3.7em;
-        clip-path: polygon(0 0, 100% 0, 20vw 100%, 0% 100%);
-    }
-
-    #accueil-info .bouton {
-        position: absolute;
-        bottom: -2em;
-        left: 7%;
-    }
-
     #accueil-billetterie {
         grid-area: 1 / 5 / 2 / 6;
     }
