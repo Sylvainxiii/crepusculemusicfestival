@@ -6,27 +6,21 @@
 }
 
 @font-face {
-    font-family: "Oppossum";
-    src: url('/src/assets/fonts/oposs___.ttf');
+    font-family: "Montserrat";
+    src: url('/src/assets/fonts/Montserrat.ttf');
 }
 
 @font-face {
-    font-family: "Locust";
-    src: url('/src/assets/fonts/Locust.ttf');
+    font-family: "NotoSans";
+    src: url('/src/assets/fonts/NotoSans.ttf');
 }
-
-@font-face {
-    font-family: "Xirod";
-    src: url('/src/assets/fonts/Xirod.otf');
-}
-
 
 :root {
     --main-font-color: #ffffff;
-    --main-font-family: "Oppossum", sans-serif;
+    --main-font-family: "Montserrat", sans-serif;
     --main-font-size: 12px;
 
-    --title-font-family: "Xirod";
+    --title-font-family: "NotoSans";
     --title-font-wheight: 400;
 
     --texte-flashy-font-family: "Xirod", sans-serif;
