@@ -1,4 +1,3 @@
-import "./Crepuscule.css"
 import VueContainer from "/src/components/VueContainer/VueContainer";
 import { crepuscule } from "/data/crepuscule2025.json";
 import VueTitre from "/src/components/VueTitre/VueTitre";
@@ -14,6 +13,7 @@ const Crepuscule = (app) => {
     fragment.appendChild(vueTitre);
 
     const contenu = VueContainer();
+    contenu.classList.add("texte-centre");
 
     for (let paragraphe in page) {
         if (paragraphe !== "titreh2") {

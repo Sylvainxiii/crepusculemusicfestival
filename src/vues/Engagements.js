@@ -1,4 +1,3 @@
-import "./Engagements.css"
 import VueTitre from "/src/components/VueTitre/VueTitre.js";
 import VueContainer from "/src/components/VueContainer/VueContainer";
 import { engagements } from "/data/crepuscule2025.json";

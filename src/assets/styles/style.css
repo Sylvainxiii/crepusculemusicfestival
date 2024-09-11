@@ -6,37 +6,22 @@
 }
 
 @font-face {
-    font-family: "Oppossum";
-    src: url('/src/assets/fonts/oposs___.ttf');
+    font-family: "Montserrat";
+    src: url('/src/assets/fonts/Montserrat.ttf');
 }
 
 @font-face {
-    font-family: "Locust";
-    src: url('/src/assets/fonts/Locust.ttf');
+    font-family: "NotoSans";
+    src: url('/src/assets/fonts/NotoSans.ttf');
 }
-
-@font-face {
-    font-family: "Xirod";
-    src: url('/src/assets/fonts/Xirod.otf');
-}
-
 
 :root {
     --main-font-color: #ffffff;
-    --main-font-family: "Oppossum", sans-serif;
+    --main-font-family: "Montserrat", sans-serif;
     --main-font-size: 12px;
 
-    --title-font-family: "Xirod";
-    --title-font-wheight: 400;
-
-    --texte-flashy-font-family: "Xirod", sans-serif;
-    --texte-flashy-font-wheight: 600;
-    --texte-flashy-font-size: 1em;
-    --texte-flashy-text-shadow: var(--texte-flashy-text-shadow-size) var(--texte-flashy-text-shadow-size) 0 rgba(var(--shadow-color), 1),
-        calc(var(--texte-flashy-text-shadow-size) * -1) var(--texte-flashy-text-shadow-size) 0 rgba(var(--shadow-color), 1),
-        calc(var(--texte-flashy-text-shadow-size) * -1) calc(var(--texte-flashy-text-shadow-size) * -1) 0 rgba(var(--shadow-color), 1),
-        var(--texte-flashy-text-shadow-size) calc(var(--texte-flashy-text-shadow-size) * -1) 0 rgba(var(--shadow-color), 1);
-    --texte-flashy-text-shadow-size: 0.05em;
+    --title-font-family: "NotoSans";
+    --title-font-wheight: 800;
 
     --onglet-menu-font-size: 1.5em;
     --onglet-menu-font-wheight: 600;
@@ -52,7 +37,7 @@
     --shadow-color-fullrange: rgba(var(--shadow-color), 0.7);
     --shadow-color-midrange: rgba(var(--shadow-color), 0.35);
 
-    --menu-background-color: rgba(0, 0, 0, 0.8);
+    --menu-background-color: rgba(15, 30, 35, 0.8);
     --accueil-container-background-color: rgba(15, 30, 35, 1);
     --vue-container-background-color: rgba(15, 30, 35, 0.7);
 
@@ -100,6 +85,9 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    list-style-type: circle;
+    list-style-position: inside;
+    padding-left: 2em;
 }
 
 a,
@@ -108,6 +96,10 @@ a:visited {
     color: var(--main-font-color);
 }
 
+p {
+    text-indent: 1.5em;
+    margin: 1.5em 0 1.5em 0;
+}
 
 /* style standard pour composants */
 .flex-row,
@@ -134,9 +126,18 @@ a:visited {
     display: inline-block;
 }
 
+.grid {
+    display: grid;
+}
+
 .center {
     justify-content: center;
     align-items: center;
+}
+
+.center-top {
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .start {
@@ -152,6 +153,11 @@ a:visited {
 .space-between {
     justify-content: space-between;
     align-items: center;
+}
+
+.space-between-top {
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .space-around {
@@ -171,8 +177,14 @@ a:visited {
     position: fixed;
 }
 
+.texte-centre {
+    text-align: center;
+}
+
 .app {
     min-height: 100vh;
+    gap: 6em;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 8%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 95%);
 }
 
 /* Media Queries */

@@ -6,7 +6,6 @@ const dates = info["dates"];
 
 const AccueilBilletterie = () => {
 
-    const idTitreAccueilBilletterie = "titre-accueil-billetterie";
     const titreAccueilBilletterie = billetterie["titre"];
     const designation = billetterie["designation"];
     const prix = billetterie["prix"];
@@ -14,8 +13,14 @@ const AccueilBilletterie = () => {
     const path = billetterie["path"];
 
     const fragment = document.createDocumentFragment();
+
+    const titre = document.createElement('h1');
+    titre.innerText = titreAccueilBilletterie;
+    fragment.appendChild(titre);
+
     const grilleBilletterie = document.createElement('div');
     grilleBilletterie.id = "grille-billetterie";
+    grilleBilletterie.className = "grid";
     fragment.appendChild(grilleBilletterie);
 
     const grilleCellule1 = document.createElement('div');
@@ -36,7 +41,7 @@ const AccueilBilletterie = () => {
     const boutonBilletterie = Bouton(bouton, path);
     fragment.appendChild(boutonBilletterie);
 
-    const accueilBilletterie = AccueilContainer(idTitreAccueilBilletterie, titreAccueilBilletterie);
+    const accueilBilletterie = document.createElement("div");
     accueilBilletterie.id = "accueil-billetterie";
     accueilBilletterie.classList.add("flex-column", "space-between");
     accueilBilletterie.appendChild(fragment);

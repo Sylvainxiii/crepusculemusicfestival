@@ -46,25 +46,33 @@
                 "artist": "Artiste 1",
                 "social": "",
                 "time": "22:00",
-                "img": "artefact1"
+                "img": "artefact1",
+                "artefact": "cube",
+                "couleur": "red"
             },
             {
                 "artist": "Artiste 2",
                 "social": "",
                 "time": "23:00",
-                "img": "artefact2"
+                "img": "artefact2",
+                "artefact": "sphere",
+                "couleur": "green"
             },
             {
                 "artist": "Artiste 3",
                 "social": "",
                 "time": "21:00",
-                "img": "artefact3"
+                "img": "artefact3",
+                "artefact": "dodecaedre",
+                "couleur": "blue"
             },
             {
                 "artist": "Artiste 4",
                 "social": "",
                 "time": "22:00",
-                "img": "artefact4"
+                "img": "artefact4",
+                "artefact": "pyramide",
+                "couleur": "yellow"
             }
         ]
     },
@@ -181,8 +189,8 @@
                 },
                 "paragraphe3": {
                     "titreh3": "ÉCO-RESPONSABILITÉ",
+                    "paragraphe": "Le CREPUSCULE Music Festival s’engage pour réduire son impact environnemental à travers des actions concrètes :",
                     "liste1": {
-                        "titreliste": "Le CREPUSCULE Music Festival s’engage pour réduire son impact environnemental à travers des actions concrètes :",
                         "ligne1": "Restriction du plastique à usage unique : gobelets réutilisables, foodtrucks…",
                         "ligne2": "Tri sélectif et revalorisation des déchets"
                     }
