@@ -4,7 +4,6 @@
 }
 
 #grille-partenaire {
-    display: grid;
     grid-template-columns: repeat(max(3), 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
     gap: 0.4em;

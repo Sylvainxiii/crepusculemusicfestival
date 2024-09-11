@@ -1,19 +1,11 @@
 import "./Footer.css";
 import map from "/src/assets/images/carte.webp";
-import { contact, footer } from "/data/crepuscule2025.json"
+import { contact, footer } from "/data/crepuscule2025.json";
+import logoFacebook from "/src/assets/images/facebook-f.svg";
+import logoInstagram from "/src/assets/images/instagram.svg";
 
 const Footer = () => {
     const fragment = document.createDocumentFragment();
-
-    const bordureFooter = document.createElement('div');
-    bordureFooter.id = "bordure-footer";
-    bordureFooter.className = "absolute";
-    fragment.appendChild(bordureFooter);
-
-    const backgroundFooter = document.createElement('div');
-    backgroundFooter.id = "background-footer";
-    backgroundFooter.classList.add("flex-row", "space-between", "absolute");
-    fragment.appendChild(backgroundFooter);
 
     // Volet reseaux sociaux---------------------------------------------------------------------------------
     const linkFacebook = contact["facebook"];
@@ -34,6 +26,9 @@ const Footer = () => {
     facebook.href = linkFacebook;
     facebook.ariaLabel = "Facebook de Drac Events";
     facebook.target = "_blank";
+    const imgFacebook = document.createElement("img");
+    imgFacebook.src = logoFacebook;
+    facebook.appendChild(imgFacebook);
     socialFooter.appendChild(facebook);
 
     const instagram = document.createElement('a');
@@ -41,6 +36,9 @@ const Footer = () => {
     instagram.href = linkInstagram;
     instagram.ariaLabel = "Instagram de Drac Events";
     instagram.target = "_blank";
+    const imgInstagram = document.createElement("img");
+    imgInstagram.src = logoInstagram;
+    instagram.appendChild(imgInstagram);
     socialFooter.appendChild(instagram);
 
     fragment.appendChild(socialFooter);
@@ -84,7 +82,7 @@ const Footer = () => {
 
     const piedDePage = document.createElement('div');
     piedDePage.id = "footer";
-    piedDePage.classList.add("flex-row", "space-between", "relative");
+    piedDePage.classList.add("flex-row", "space-between-top", "relative");
     piedDePage.appendChild(fragment);
 
     return piedDePage;

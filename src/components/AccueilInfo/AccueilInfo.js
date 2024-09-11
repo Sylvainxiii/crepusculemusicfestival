@@ -24,6 +24,7 @@ const AccueilInfo = () => {
 
     const texte = document.createElement('div');
     texte.id = "texte-accueil-info";
+    texte.className = "texte-centre";
     texte.innerText = texteAccueilInfo;
     fragment.appendChild(texte);
 

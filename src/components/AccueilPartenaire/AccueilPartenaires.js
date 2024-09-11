@@ -13,6 +13,7 @@ const AccueilPartenaires = () => {
 
     const grillePartenaire = document.createElement('div');
     grillePartenaire.id = "grille-partenaire";
+    grillePartenaire.className = "grid";
     fragment.appendChild(grillePartenaire);
 
     logoPartenaires.map(partenaire => {

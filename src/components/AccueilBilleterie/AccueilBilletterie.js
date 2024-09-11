@@ -20,6 +20,7 @@ const AccueilBilletterie = () => {
 
     const grilleBilletterie = document.createElement('div');
     grilleBilletterie.id = "grille-billetterie";
+    grilleBilletterie.className = "grid";
     fragment.appendChild(grilleBilletterie);
 
     const grilleCellule1 = document.createElement('div');
