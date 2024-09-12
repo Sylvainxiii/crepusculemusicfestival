@@ -1,11 +1,11 @@
 #banniere {
     width: 100%;
-    height: 50vw
+    height: 55vw
 }
 
 #logo-banniere {
-    width: 30%;
-    top: 3em;
-    left: 35%;
+    width: 40%;
+    top: 10em;
+    left: 30%;
     z-index: 3;
 }
