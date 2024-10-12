@@ -58,7 +58,6 @@
 
 body {
     background-image: url("/src/assets/images/fond-body.webp");
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
