@@ -1,5 +1,4 @@
 .accueil-container {
-    background: url("/src/assets/images/fondcontainer.png");
     overflow: hidden;
     border: 0.2em solid rgba(0, 190, 210, 1);
 }

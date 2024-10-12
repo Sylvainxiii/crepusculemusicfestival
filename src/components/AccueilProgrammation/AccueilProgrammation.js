@@ -20,32 +20,27 @@ const AccueilProgrammation = () => {
         const container = AccueilContainer();
         container.classList.add("container-artefact-accueil");
         container.id = "artiste" + artistes.indexOf(artiste);
-        // const Artefact = document.createElement('img');
-        // const index = gallery.findIndex(src => src.includes(artiste["img"]));
-        // Artefact.src = gallery[index];
-        // Artefact.classList.add("artefact-accueil", "absolute");
-        // container.appendChild(Artefact);
         genererArtefact(container, artiste["artefact"], artiste["couleur"]);
 
         fragment.appendChild(container);
     })
 
-    const videoContainer = AccueilContainer();
-    videoContainer.id = "teaser";
-    const video = document.createElement('video');
-    video.className = "absolute";
-    video.muted = true;
-    video.autoplay = true;
-    video.playsInline = true;
-    video.loop = true;
+    // const videoContainer = AccueilContainer();
+    // videoContainer.id = "teaser";
+    // const video = document.createElement('video');
+    // video.className = "absolute";
+    // video.muted = true;
+    // video.autoplay = true;
+    // video.playsInline = true;
+    // video.loop = true;
 
-    const sourcevideo = document.createElement('source');
-    sourcevideo.src = teaser;
-    sourcevideo.type = "video/mp4";
-    video.appendChild(sourcevideo);
+    // const sourcevideo = document.createElement('source');
+    // sourcevideo.src = teaser;
+    // sourcevideo.type = "video/mp4";
+    // video.appendChild(sourcevideo);
 
-    videoContainer.appendChild(video);
-    fragment.appendChild(videoContainer);
+    // videoContainer.appendChild(video);
+    // fragment.appendChild(videoContainer);
 
     const accueilProgrammationGrille = document.createElement("div");
     accueilProgrammationGrille.id = "accueil-programmation-grille";
