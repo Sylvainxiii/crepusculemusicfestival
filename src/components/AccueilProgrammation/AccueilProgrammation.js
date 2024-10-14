@@ -19,7 +19,7 @@ const AccueilProgrammation = () => {
         const container = AccueilContainer();
         container.classList.add("container-artefact-accueil");
         container.id = "artiste" + artistes.indexOf(artiste);
-        genererArtefact(container, artiste["artefact"], artiste["couleur"]);
+        // genererArtefact(container, artiste["artefact"], artiste["couleur"]);
 
         fragment.appendChild(container);
     })

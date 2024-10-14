@@ -57,15 +57,21 @@
 }
 
 body {
-    background-image: url("/src/assets/images/fond-body.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top right;
     color: var(--main-font-color);
     font-family: var(--main-font-family);
     letter-spacing: 0.2em;
     font-size: var(--main-font-size);
+    overflow: hidden;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    gap: 6em;
+    position: relative;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 h1,
@@ -180,11 +186,6 @@ p {
     text-align: center;
 }
 
-.app {
-    min-height: 100vh;
-    gap: 6em;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 8%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 95%);
-}
 
 /* Media Queries */
 
