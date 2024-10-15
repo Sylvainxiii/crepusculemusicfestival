@@ -10,39 +10,28 @@
     src: url('/src/assets/fonts/Montserrat.ttf');
 }
 
-@font-face {
-    font-family: "NotoSans";
-    src: url('/src/assets/fonts/NotoSans.ttf');
-}
-
 :root {
     --main-font-color: #ffffff;
     --main-font-family: "Montserrat", sans-serif;
-    --main-font-size: 12px;
+    --main-font-size: 8px;
 
-    --title-font-family: "NotoSans";
+    --title-font-family: var(--main-font-family);
     --title-font-wheight: 800;
 
     --onglet-menu-font-size: 1.5em;
-    --onglet-menu-font-wheight: 600;
+    --onglet-menu-font-wheight: var(--title-font-wheight);
     --onglet-menu-text-shadow: 0 0 0.1em rgba(var(--shadow-color), 1),
         0 0 0.25em rgba(var(--shadow-color), 0.9),
         0 0 0.5em rgba(var(--shadow-color), 0.7),
         0 0 2em rgba(var(--shadow-color), 0.5);
-
-    --banniere-img-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 1) 70%, rgba(255, 255, 255, 0) 90%);
-    --banniere-logo-gradient-masque: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 40%, rgba(255, 255, 255, 0.2) 100%);
+    --menu-background-color: rgba(15, 30, 35, 0.8);
 
     --shadow-color: 40, 187, 194;
     --shadow-color-fullrange: rgba(var(--shadow-color), 0.7);
     --shadow-color-midrange: rgba(var(--shadow-color), 0.35);
 
-    --menu-background-color: rgba(15, 30, 35, 0.8);
     --accueil-container-background-color: rgba(15, 30, 35, 1);
     --vue-container-background-color: rgba(15, 30, 35, 0.7);
-
-    --bouton-menu-circulaire-transition: transform 0.7s, scale 0.3s;
-    --bouton-menu-circulaire-pointer-event: none;
 
     --bouton-menu-classique-color: #ffffff;
     --bouton-menu-classique-shadow: 0 0 0.2em 0.1em var(--shadow-color-fullrange);
@@ -191,14 +180,14 @@ p {
 
 @media (width >=768px) {
     body {
-        font-size: calc(var(--main-font-size) + 4px);
+        font-size: calc(var(--main-font-size) + 6px);
         /* Tablet */
     }
 }
 
 @media (width >=1440px) {
     body {
-        font-size: calc(var(--main-font-size) + 8px);
+        font-size: calc(var(--main-font-size) + 10px);
         /* Desktop */
     }
 }

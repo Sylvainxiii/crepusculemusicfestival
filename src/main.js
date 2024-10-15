@@ -28,8 +28,6 @@ app.addEventListener('scroll', () => {
     if (backgroundBottom - 20 > windowHeight) {
         background.style.top = (-scrollY / 3) + 'px';
     } else if (direction === 'up') {
-        console.log(scrollY);
-        console.log(backgroundTop);
         if (-scrollY >= backgroundTop * 3) {
             background.style.top = (-scrollY / 3) + 'px';
         }
