@@ -3,11 +3,22 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 100vw;
-    height: 250vh;
-    background-image: url("/src/assets/images/fond-body.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
+    width: 150vw;
     transform: translateX(-50%);
+}
+
+/* Media Queries */
+
+@media (width >=768px) {
+    .background {
+        width: 120vw;
+        /* Tablet */
+    }
+}
+
+@media (width >=1440px) {
+    .background {
+        width: 100vw;
+        /* Desktop */
+    }
 }

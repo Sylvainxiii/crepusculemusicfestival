@@ -2,7 +2,6 @@ import "./AccueilProgrammation.css";
 import AccueilContainer from "/src/components/AccueilContainer/AccueilContainer.js";
 import { programmation } from "/data/crepuscule2025.json";
 import { genererArtefact } from "../Artefact/Artefact";
-// const gallery = Object.values(import.meta.glob('/src/assets/images/artistes/*.{png,jpg,jpeg,PNG,JPEG,webp}', { eager: true, query: '?url', import: 'default' }))
 
 const AccueilProgrammation = () => {
 
@@ -19,7 +18,7 @@ const AccueilProgrammation = () => {
         const container = AccueilContainer();
         container.classList.add("container-artefact-accueil");
         container.id = "artiste" + artistes.indexOf(artiste);
-        // genererArtefact(container, artiste["artefact"], artiste["couleur"]);
+        genererArtefact(container, artiste["artefact"], artiste["couleur"]);
 
         fragment.appendChild(container);
     })

@@ -1,6 +1,4 @@
 import * as THREE from 'three';
-import { metalness, roughness, shininess } from 'three/webgpu';
-
 
 export function genererArtefact(container, geometrie, couleur) {
     let scene;

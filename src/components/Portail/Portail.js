@@ -3,7 +3,7 @@ import "./Portail.css";
 const Portail = () => {
     const portail = document.createElement("div");
     portail.id = "portail";
-    portail.className = "absolute";
+    portail.className = "relative";
 
     const faceDessusOmbre = document.createElement("div");
     faceDessusOmbre.id = "face-dessus-ombre";

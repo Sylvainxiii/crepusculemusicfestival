@@ -1,6 +1,6 @@
 import './Banniere.css';
 import Portail from '/src/components/Portail/Portail';
-import logo from "/src/assets/images/crepuscule-blanc.webp";
+import logo from "/src/assets/images/logo_crepuscule.svg";
 
 const Banniere = () => {
 
@@ -8,7 +8,7 @@ const Banniere = () => {
 
   const logoBanniere = document.createElement('img');
   logoBanniere.id = "logo-banniere";
-  logoBanniere.className = "absolute";
+  logoBanniere.className = "relative";
   logoBanniere.src = logo;
   logoBanniere.alt = "Crepuscule Music Festival logo"
 
