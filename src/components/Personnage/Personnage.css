@@ -1,0 +1,123 @@
+#scene {
+    width: 100%;
+    top: 5em;
+    perspective: 100em;
+}
+
+#personnage {
+    width: 20%;
+    top: 12em;
+    z-index: 1;
+    left: 40%;
+    animation: oscillation-personnage 10s ease-in-out infinite;
+}
+
+#caillou-1 {
+    width: 3%;
+    top: 26em;
+    z-index: 1;
+    left: 48%;
+    animation: oscillation-caillou-1 5s ease-in-out infinite;
+
+}
+
+#caillou-2 {
+    width: 1.5%;
+    top: 25em;
+    z-index: 0;
+    left: 54%;
+    animation: oscillation-caillou-2 6s ease-in-out infinite;
+
+}
+
+#caillou-3 {
+    width: 1%;
+    top: 22em;
+    z-index: 0;
+    left: 62%;
+    animation: oscillation-caillou-3 5s ease-in-out infinite;
+
+}
+
+#caillou-4 {
+    width: 2%;
+    top: 16em;
+    z-index: 0;
+    left: 59%;
+    animation: oscillation-caillou-4 7s ease-in-out infinite;
+
+}
+
+@keyframes oscillation-personnage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes oscillation-caillou-1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(2.5em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes oscillation-caillou-2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes oscillation-caillou-3 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2em);
+
+
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes oscillation-caillou-4 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.5em);
+
+
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,4 +1,5 @@
 import "./Portail.css";
+import Personnage from "../Personnage/Personnage";
 
 const Portail = () => {
     const portail = document.createElement("div");
@@ -26,10 +27,13 @@ const Portail = () => {
     faceArriere.id = "face-arriere";
     faceArriere.className = "relative";
 
+
+
     portail.appendChild(faceDessusOmbre);
     portail.appendChild(faceArriere);
     portail.appendChild(faceGauche);
     portail.appendChild(faceDroite);
+    portail.appendChild(Personnage());
 
     return portail;
 }
