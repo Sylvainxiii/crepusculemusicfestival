@@ -1,51 +1,48 @@
 #scene {
     width: 100%;
-    top: 5em;
+    aspect-ratio: 1/1;
+    top: 0;
     perspective: 100em;
 }
 
 #personnage {
     width: 20%;
-    top: 12em;
     z-index: 1;
+    top: 30%;
     left: 40%;
     animation: oscillation-personnage 10s ease-in-out infinite;
 }
 
 #caillou-1 {
     width: 3%;
-    top: 26em;
     z-index: 1;
+    top: 65%;
     left: 48%;
     animation: oscillation-caillou-1 5s ease-in-out infinite;
-
 }
 
 #caillou-2 {
     width: 1.5%;
-    top: 25em;
+    top: 50%;
     z-index: 0;
     left: 54%;
     animation: oscillation-caillou-2 6s ease-in-out infinite;
-
 }
 
 #caillou-3 {
     width: 1%;
-    top: 22em;
+    top: 40%;
     z-index: 0;
-    left: 62%;
+    left: 60%;
     animation: oscillation-caillou-3 5s ease-in-out infinite;
-
 }
 
 #caillou-4 {
-    width: 2%;
-    top: 16em;
+    width: 1%;
+    top: 32%;
     z-index: 0;
-    left: 59%;
+    left: 54%;
     animation: oscillation-caillou-4 7s ease-in-out infinite;
-
 }
 
 @keyframes oscillation-personnage {
@@ -54,7 +51,7 @@
     }
 
     50% {
-        transform: translateY(5em);
+        transform: translateY(1vh);
     }
 
     100% {
@@ -68,7 +65,7 @@
     }
 
     50% {
-        transform: translateY(2.5em);
+        transform: translateY(-2vh);
     }
 
     100% {
@@ -82,7 +79,7 @@
     }
 
     50% {
-        transform: translateY(3em);
+        transform: translateY(3vh);
     }
 
     100% {
@@ -96,7 +93,7 @@
     }
 
     50% {
-        transform: translateY(-2em);
+        transform: translateY(-2vh);
 
 
     }
@@ -112,7 +109,7 @@
     }
 
     50% {
-        transform: translateY(-2.5em);
+        transform: translateY(1.5vh);
 
 
     }
