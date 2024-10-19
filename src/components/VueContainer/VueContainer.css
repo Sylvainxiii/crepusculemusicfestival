@@ -1,5 +1,9 @@
+:root {
+    --vue-container-background-color: rgba(15, 30, 35, 0.7);
+}
+
 .vue-container {
-    background-color: var(--vue-container-background-color);
+    /* background-color: var(--vue-container-background-color); */
     height: 100%;
     width: 95%;
     padding: 1em;

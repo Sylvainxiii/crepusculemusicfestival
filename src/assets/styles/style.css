@@ -11,7 +11,8 @@
 }
 
 :root {
-    --main-font-color: #ffffff;
+    --white: rgba(250, 250, 250, 1);
+    --main-font-color: var(--white);
     --main-font-family: "Montserrat", sans-serif;
     --main-font-size: 8px;
 
@@ -20,28 +21,29 @@
 
     --onglet-menu-font-size: 1.5em;
     --onglet-menu-font-wheight: var(--title-font-wheight);
-    --onglet-menu-text-shadow: 0 0 0.1em rgba(var(--shadow-color), 1),
-        0 0 0.25em rgba(var(--shadow-color), 0.9),
-        0 0 0.5em rgba(var(--shadow-color), 0.7),
-        0 0 2em rgba(var(--shadow-color), 0.5);
     --menu-background-color: rgba(15, 30, 35, 0.8);
 
-    --shadow-color: 40, 187, 194;
-    --shadow-color-fullrange: rgba(var(--shadow-color), 0.7);
-    --shadow-color-midrange: rgba(var(--shadow-color), 0.35);
+    --blue-shadow-color: 40, 187, 194;
+    --blue-shadow-color-fullrange: rgba(var(--blue-shadow-color), 0.7);
+    --blue-shadow-color-midrange: rgba(var(--blue-shadow-color), 0.35);
 
-    --accueil-container-background-color: rgba(15, 30, 35, 1);
-    --vue-container-background-color: rgba(15, 30, 35, 0.7);
+    --purple-shadow-color: rgb(189, 0, 255);
+    --purple-box-shadow: 0 0 8px var(--white),
+        inset 0 0 8px var(--white),
+        0 0 16px var(--purple-shadow-color),
+        inset 0 0 16px var(--purple-shadow-color),
+        0 0 32px var(--purple-shadow-color),
+        inset 0 0 32px var(--purple-shadow-color);
+    --purple-box-border: 0.1em solid var(--white);
 
-    --bouton-menu-classique-color: #ffffff;
-    --bouton-menu-classique-shadow: 0 0 0.2em 0.1em var(--shadow-color-fullrange);
-    --bouton-menu-classique-shadow-midrange: 0 0 0.2em 0.1em var(--shadow-color-midrange);
+    --bouton-menu-classique-color: var(--white);
+    --bouton-menu-classique-shadow: 0 0 0.2em 0.1em var(--blue-shadow-color-fullrange);
+    --bouton-menu-classique-shadow-midrange: 0 0 0.2em 0.1em var(--blue-shadow-color-midrange);
 
-    --bouton-box-shadow: 0 0 0.25em rgba(var(--shadow-color), 1),
-        0 0 1.2em rgba(var(--shadow-color), 1),
-        0 0 2em rgba(var(--shadow-color), 1),
-        0 0 4em rgba(var(--shadow-color), 1);
-
+    --bouton-box-shadow: 0 0 0.25em rgba(var(--blue-shadow-color), 1),
+        0 0 1.2em rgba(var(--blue-shadow-color), 1),
+        0 0 2em rgba(var(--blue-shadow-color), 1),
+        0 0 4em rgba(var(--blue-shadow-color), 1);
 }
 
 body {
@@ -55,7 +57,7 @@ body {
 .app {
     width: 100vw;
     height: 100vh;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     gap: 6em;
     position: relative;
     overflow-x: hidden;
