@@ -13,7 +13,7 @@ const Banniere = () => {
   logoBanniere.src = logo;
   logoBanniere.alt = "Crepuscule Music Festival logo"
 
-  const dateLieuBanniere = document.createElement('div');
+  const dateLieuBanniere = document.createElement('h1');
   dateLieuBanniere.id = "date-lieu-banniere";
   dateLieuBanniere.innerText = dateLieu;
 

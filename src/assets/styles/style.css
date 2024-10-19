@@ -68,6 +68,16 @@ h2,
 h3 {
     font-family: var(--title-font-family);
     font-weight: var(--title-font-wheight);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
 }
 
 h3 {
@@ -178,16 +188,16 @@ p {
 
 /* Media Queries */
 
-@media (width >=768px) {
+@media (width >=810px) {
     body {
-        font-size: calc(var(--main-font-size) + 6px);
+        font-size: calc(var(--main-font-size) + 4px);
         /* Tablet */
     }
 }
 
-@media (width >=1440px) {
+@media (width > 1232px) {
     body {
-        font-size: calc(var(--main-font-size) + 10px);
+        font-size: calc(var(--main-font-size) + 12px);
         /* Desktop */
     }
 }

@@ -25,7 +25,7 @@ const AccueilInfo = () => {
     const texte = document.createElement('div');
     texte.id = "texte-accueil-info";
     texte.className = "texte-centre";
-    texte.innerText = texteAccueilInfo;
+    texte.innerHTML = texteAccueilInfo;
     fragment.appendChild(texte);
 
     const bouton = Bouton(boutonAccueilInfo, path);

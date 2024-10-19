@@ -16,7 +16,7 @@
     z-index: 3;
 }
 
-@media (width >=768px) {
+@media (width >=810px) {
 
     #banniere {
         gap: 4em;

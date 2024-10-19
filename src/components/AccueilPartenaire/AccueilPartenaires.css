@@ -14,7 +14,7 @@
     width: 15vw;
 }
 
-@media (width >=768px) {
+@media (width >=810px) {
     #grille-partenaire {
         grid-template-columns: repeat(max(6), 1fr);
     }
