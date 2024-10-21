@@ -5,6 +5,11 @@
     left: 50%;
     width: 150vw;
     transform: translateX(-50%);
+
+    img {
+        width: 100%;
+    }
+
 }
 
 /* Media Queries */

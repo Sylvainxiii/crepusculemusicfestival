@@ -2,9 +2,14 @@ import "./Background.css";
 
 const Background = () => {
 
-    const background = document.createElement('img');
+    const background = document.createElement('div');
     background.className = "background";
-    background.src = "/src/assets/images/fond-body.webp";
+
+    const backgroundImg = document.createElement('img');
+    backgroundImg.className = "background-img";
+    backgroundImg.src = "/src/assets/images/fond-body.webp";
+
+    background.appendChild(backgroundImg);
 
     return background;
 }

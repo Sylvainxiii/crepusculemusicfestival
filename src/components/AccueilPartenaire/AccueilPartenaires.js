@@ -14,7 +14,7 @@ const AccueilPartenaires = () => {
 
     const lignePartenaire = document.createElement('div');
     lignePartenaire.id = "ligne-partenaire";
-    lignePartenaire.className = "flex-row";
+    lignePartenaire.classList.add("flex-row", "center");
 
     // Compte le nombre de partenaires
     const max = Object.keys(partenaires["liste"]).length;
@@ -29,10 +29,14 @@ const AccueilPartenaires = () => {
         logoPartenaire.id = logo;
         logoPartenaire.className = ("logo-partenaire-accueil");
 
-        if (logo == 2) {
+        if (logo == 3) {
             logoPartenaire.classList.add("logo-centre")
-        } else if (["0", "1", "3", "4"].includes(logo)) {
-            logoPartenaire.classList.add("logo-voisin")
+        } else if (["2", "4"].includes(logo)) {
+            logoPartenaire.classList.add("logo-voisin-1")
+        } else if (["1", "5"].includes(logo)) {
+            logoPartenaire.classList.add("logo-voisin-2")
+        } else {
+            logoPartenaire.classList.add("hidden")
         }
 
         lignePartenaire.appendChild(logoPartenaire)
@@ -50,11 +54,13 @@ export function getLogos(liste, index) {
 
     // Pour sélectionner deux éléments avant et après l'index
     let result = [
+        liste[(index - 3 + longueurListe) % longueurListe],  // troisème élément avant l'index qui sera caché
         liste[(index - 2 + longueurListe) % longueurListe],  // Deuxième élément avant l'index
         liste[(index - 1 + longueurListe) % longueurListe],  // Premier élément avant l'index
         liste[index],  // Premier élément avant l'index
         liste[(index + 1) % longueurListe],           // Premier élément après l'index
-        liste[(index + 2) % longueurListe]            // Deuxième élément après l'index
+        liste[(index + 2) % longueurListe],            // Deuxième élément après l'index
+        liste[(index + 3) % longueurListe]            // troisème élément après l'index qui sera caché
     ];
 
     return result;
