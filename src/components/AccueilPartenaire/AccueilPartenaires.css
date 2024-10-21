@@ -1,25 +1,13 @@
 #accueil-partenaires {
     width: 60%;
-    gap: 1em
+    gap: 2em;
 }
 
-#grille-partenaire {
-    grid-template-columns: repeat(max(3), 1fr);
-    grid-template-rows: repeat(auto-fill, 1fr);
-    gap: 0.4em;
-    padding: 0.4em;
+#ligne-partenaire {
+    width: 100%;
+    overflow: hidden;
 }
 
 .logo-partenaire-accueil {
-    width: 15vw;
-}
-
-@media (width >=810px) {
-    #grille-partenaire {
-        grid-template-columns: repeat(max(6), 1fr);
-    }
-
-    .logo-partenaire-accueil {
-        width: 10vw;
-    }
+    width: 10vw;
 }

@@ -80,7 +80,59 @@
         "titre": "Partenaires",
         "path": "/partenaires/",
         "vue": "Partenaires.js",
-        "module": "Partenaires"
+        "module": "Partenaires",
+        "liste": {
+            "0": {
+                "nom": "81e",
+                "site": "",
+                "logo": "81e.svg"
+            },
+            "1": {
+                "nom": "Le Chien Rouge",
+                "site": "",
+                "logo": "chien_rouge.svg"
+            },
+            "2": {
+                "nom": "Crédit Agricole",
+                "site": "",
+                "logo": "credit_agricole.svg"
+            },
+            "3": {
+                "nom": "Département du Tarn",
+                "site": "",
+                "logo": "departement_tarn.svg"
+            },
+            "4": {
+                "nom": "Drac Event",
+                "site": "",
+                "logo": "drac_event.svg"
+            },
+            "5": {
+                "nom": "Dream",
+                "site": "",
+                "logo": "dream.svg"
+            },
+            "6": {
+                "nom": "Le Coupeur",
+                "site": "",
+                "logo": "le_coupeur.svg"
+            },
+            "7": {
+                "nom": "Romain Gayraud",
+                "site": "",
+                "logo": "romain_gayraud.svg"
+            },
+            "8": {
+                "nom": "Sorep",
+                "site": "",
+                "logo": "sorep.svg"
+            },
+            "9": {
+                "nom": "Ville d'Albi",
+                "site": "",
+                "logo": "ville_albi.svg"
+            }
+        }
     },
     "info": {
         "titre": "Infos Pratiques",

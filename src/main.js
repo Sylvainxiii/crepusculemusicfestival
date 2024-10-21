@@ -7,6 +7,7 @@ document.body.appendChild(Background());
 
 const app = document.querySelector('.app');
 
+// Permet d'avoir deux vitesses de scroll différentes en tre le background et le foreground
 let lastScrollY = 0;
 app.addEventListener('scroll', () => {
     const scrollY = app.scrollTop;
