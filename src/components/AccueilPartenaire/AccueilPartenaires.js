@@ -31,18 +31,26 @@ const AccueilPartenaires = () => {
 
         if (logo == 3) {
             logoPartenaire.classList.add("logo-centre")
-        } else if (["2", "4"].includes(logo)) {
-            logoPartenaire.classList.add("logo-voisin-1")
-        } else if (["1", "5"].includes(logo)) {
-            logoPartenaire.classList.add("logo-voisin-2")
+        } else if (["1", "2", "4", "5"].includes(logo)) {
+            logoPartenaire.classList.add("logo-voisin-" + logo)
+        } else if (logo == 1) {
+            logoPartenaire.classList.add("logo-hidden-gauche")
+        } else if (logo == 6) {
+            logoPartenaire.classList.add("logo-hidden-droite")
         } else {
-            logoPartenaire.classList.add("hidden")
+            logoPartenaire.classList.add("hidden-logo")
         }
 
         lignePartenaire.appendChild(logoPartenaire)
     }
 
     accueilPartenaires.appendChild(lignePartenaire);
+
+    //Démarrer l'animation après un court délai pour s'assurer que le DOM est prêt
+    setTimeout(() => {
+        animateLogos();
+    }, 100);
+
 
     return accueilPartenaires;
 }
@@ -53,32 +61,70 @@ export function getLogos(liste, index) {
     const longueurListe = Object.keys(liste).length;
 
     // Pour sélectionner deux éléments avant et après l'index
-    let result = [
-        liste[(index - 3 + longueurListe) % longueurListe],  // troisème élément avant l'index qui sera caché
-        liste[(index - 2 + longueurListe) % longueurListe],  // Deuxième élément avant l'index
-        liste[(index - 1 + longueurListe) % longueurListe],  // Premier élément avant l'index
-        liste[index],  // Premier élément avant l'index
-        liste[(index + 1) % longueurListe],           // Premier élément après l'index
-        liste[(index + 2) % longueurListe],            // Deuxième élément après l'index
-        liste[(index + 3) % longueurListe]            // troisème élément après l'index qui sera caché
-    ];
+    let result = []
+    for (let i = 3; i >= 1; i--) {
+        result.push(liste[(index - i) % longueurListe]);
+    }
 
+    result.push(liste[index])  // Premier élément avant l'index
+
+    for (let i = 1; i < longueurListe - 3; i++) {
+        result.push(liste[(index + i) % longueurListe]);
+    }
     return result;
 }
 
-// export function attribueClasse() {
-//     const logos = document.getElementsByClassName("logo-partenaire-accueil")
-//     const idLogoCentre = document.querySelector(".logo-centre").id
-//     const listeVoisin = getVoisins(logos, idLogoCentre);
+function animateLogos() {
+    const logosContainer = document.getElementById('ligne-partenaire');
+    if (!logosContainer) return;
 
-//     for (let i = 0; i < logos.length; i++) {
-//         const idLogo = logos.namedItem(i).id
-//         if (idLogo != idLogoCentre) {
-//             if (listeVoisin.includes(logos.namedItem(i))) {
-//                 logos.namedItem(i).classList.add("logo-voisin")
-//             } else {
-//                 logos.namedItem(i).classList.add("hidden")
-//             }
-//         }
-//     }
-// }
+    const logos = Array.from(logosContainer.getElementsByClassName('logo-partenaire-accueil'));
+
+    // Fonction pour déplacer les logos
+    const shiftLogos = () => {
+        // Pour chaque logo, obtenir sa nouvelle classe
+        let previousClass = "hidden-logo";
+
+        logos.forEach((logo) => {
+            const currentClasses = logo.classList;
+            const currentClass = currentClasses[1];
+
+            // Ajouter la nouvelle classe
+            logo.classList.replace(currentClass, previousClass);
+            previousClass = currentClass;
+        });
+
+        // Réorganiser physiquement les logos dans le DOM
+        const firstLogo = logos[0];
+        logosContainer.removeChild(firstLogo);
+        logosContainer.appendChild(firstLogo);
+
+        // Mettre à jour le tableau des logos
+        logos.push(logos.shift());
+    };
+
+    // Configuration de l'animation
+    const ANIMATION_INTERVAL = 2000; // 3 secondes entre chaque défilement
+
+    // Démarre l'animation
+    let animationInterval = setInterval(shiftLogos, ANIMATION_INTERVAL);
+
+    // Arrête l'animation quand l'élément n'est plus visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                clearInterval(animationInterval);
+            } else {
+                animationInterval = setInterval(shiftLogos, ANIMATION_INTERVAL);
+            }
+        });
+    });
+
+    observer.observe(logosContainer);
+
+    // Nettoyage lors du démontage du composant
+    return () => {
+        clearInterval(animationInterval);
+        observer.disconnect();
+    };
+}
