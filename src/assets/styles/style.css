@@ -61,7 +61,7 @@ body {
 .app {
     width: 100vw;
     height: 100vh;
-    gap: 5em;
+    gap: 6em;
     position: relative;
     overflow-x: hidden;
     overflow-y: auto;
@@ -77,11 +77,11 @@ h3 {
 }
 
 h1 {
-    font-size: 2.8em;
+    font-size: 4em;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 3em;
 }
 
 h3 {
@@ -206,7 +206,7 @@ strong {
 
 @media (width >=810px) {
     body {
-        font-size: calc(var(--main-font-size) + 4px);
+        font-size: calc(var(--main-font-size) + 6px);
         /* Tablet */
     }
 
@@ -217,12 +217,28 @@ strong {
     #footer-mobile {
         display: none;
     }
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    h2 {
+        font-size: 2.3em;
+    }
 }
 
 @media (width > 1232px) {
     body {
         font-size: calc(var(--main-font-size) + 12px);
         /* Desktop */
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
     }
 }
 

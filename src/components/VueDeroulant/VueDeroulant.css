@@ -1,9 +1,15 @@
+.deroulant {
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
 .deroulant-visible {
-    font-weight: 600;
+    font-weight: var(--title-font-wheight);
 }
 
 .deroulant-cache {
     overflow: hidden;
     height: 0;
-    transition: height 0.4s linear;
+    margin-left: 2em;
+    transition: height 0.4s linear, margin-bottom 0.4s linear;
 }

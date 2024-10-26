@@ -24,12 +24,12 @@ const Info = (app) => {
         divParagraphe.id = paragraphe;
 
         const titreParagraphe = document.createElement("h2");
-        titreParagraphe.textContent = page[paragraphe]["titreh3"];
+        titreParagraphe.textContent = page[paragraphe]["titreh2"];
         divParagraphe.appendChild(titreParagraphe);
         contenu.appendChild(divParagraphe);
 
         for (let elmt in contenuParagraphe) {
-            if (elmt !== "titreh3" && elmt !== "faq") {
+            if (elmt !== "titreh2" && elmt !== "faq") {
                 const sousParagraphe = document.createElement("div");
                 sousParagraphe.textContent = contenuParagraphe[elmt];
                 divParagraphe.appendChild(sousParagraphe);

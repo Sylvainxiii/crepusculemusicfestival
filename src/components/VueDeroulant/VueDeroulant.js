@@ -12,18 +12,20 @@ const VueDeroulant = (contenuVisible, contenuCache, id) => {
 
     const divCache = document.createElement("div");
     divCache.className = "deroulant-cache";
-    divCache.textContent = contenuCache;
+    divCache.innerHTML = contenuCache;
     deroulant.appendChild(divCache);
 
 
 
-    divVisible.addEventListener('click', () => {
+    deroulant.addEventListener('click', () => {
         if (divCache.classList.contains("deroule")) {
             divCache.style.height = 0 + 'px';
+            divCache.style.marginBottom = 0 + 'em';
             divCache.classList.remove("deroule");
         } else {
             let divCacheHeight = divCache.scrollHeight;
             divCache.style.height = divCacheHeight + 'px';
+            divCache.style.marginBottom = 2 + 'em';
             divCache.classList.add("deroule");
         }
     })
