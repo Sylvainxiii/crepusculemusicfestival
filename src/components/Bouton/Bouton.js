@@ -4,11 +4,11 @@ const Bouton = (texte, path) => {
 
 
     const fragment = document.createDocumentFragment();
-    for (let i = 0; i < 4; i = i + 1) {
-        const spanBouton = document.createElement('span');
-        spanBouton.classList.add("absolute", "block");
-        fragment.appendChild(spanBouton);
-    }
+    // for (let i = 0; i < 4; i = i + 1) {
+    //     const spanBouton = document.createElement('span');
+    //     spanBouton.classList.add("absolute", "block");
+    //     fragment.appendChild(spanBouton);
+    // }
 
     const textBouton = document.createElement('div');
     const lienBouton = document.createElement('a');

@@ -27,13 +27,13 @@
     --blue-shadow-color-fullrange: rgba(var(--blue-shadow-color), 0.7);
     --blue-shadow-color-midrange: rgba(var(--blue-shadow-color), 0.35);
 
-    --purple-shadow-color: rgb(189, 0, 255);
+    --purple-shadow-color: 189, 0, 255;
     --purple-box-shadow: 0 0 8px var(--white),
         inset 0 0 8px var(--white),
-        0 0 16px var(--purple-shadow-color),
-        inset 0 0 16px var(--purple-shadow-color),
-        0 0 32px var(--purple-shadow-color),
-        inset 0 0 32px var(--purple-shadow-color);
+        0 0 16px rgb(var(--purple-shadow-color)),
+        inset 0 0 16px rgb(var(--purple-shadow-color)),
+        0 0 32px rgb(var(--purple-shadow-color)),
+        inset 0 0 32px rgb(var(--purple-shadow-color));
     --purple-box-border: 0.1em solid var(--white);
 
     --bouton-menu-classique-color: var(--white);
@@ -44,6 +44,8 @@
         0 0 1.2em rgba(var(--blue-shadow-color), 1),
         0 0 2em rgba(var(--blue-shadow-color), 1),
         0 0 4em rgba(var(--blue-shadow-color), 1);
+
+    --animation-parametre: 2s infinite alternate;
 }
 
 body {
@@ -214,5 +216,48 @@ p {
     body {
         font-size: calc(var(--main-font-size) + 12px);
         /* Desktop */
+    }
+}
+
+/* Animations */
+/* Clignotement néon */
+@keyframes flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        box-shadow: var(--purple-box-shadow);
+
+    }
+
+    20%,
+    24%,
+    55% {
+        box-shadow: none;
+    }
+}
+
+@keyframes change-border-color {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        border-color: var(--white);
+    }
+
+    20%,
+    24%,
+    55% {
+        border-color: rgba(10, 10, 10, 1);
     }
 }
