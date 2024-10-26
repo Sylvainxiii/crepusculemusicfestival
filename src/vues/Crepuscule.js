@@ -5,7 +5,7 @@ const page = crepuscule["page"];
 
 const Crepuscule = (app) => {
     console.log(page);
-    const titreAccueilInfo = page["titreh2"];
+    const titreAccueilInfo = page["titreh1"];
 
     const fragment = document.createDocumentFragment();
     const vueTitre = VueTitre(titreAccueilInfo);
@@ -16,14 +16,14 @@ const Crepuscule = (app) => {
     contenu.classList.add("texte-centre");
 
     for (let paragraphe in page) {
-        if (paragraphe !== "titreh2") {
+        if (paragraphe !== "titreh1") {
             const divParagraphe = document.createElement("div");
             divParagraphe.id = paragraphe;
-            const titreParagraphe = document.createElement("h3");
-            titreParagraphe.textContent = page[paragraphe]["titreh3"];
+            const titreParagraphe = document.createElement("h2");
+            titreParagraphe.textContent = page[paragraphe]["titreh2"];
             divParagraphe.appendChild(titreParagraphe);
             const texteParagraphe = document.createElement("p");
-            texteParagraphe.textContent = page[paragraphe]["paragraphe"];
+            texteParagraphe.innerHTML = page[paragraphe]["paragraphe"];
             divParagraphe.appendChild(texteParagraphe);
             contenu.appendChild(divParagraphe);
         }

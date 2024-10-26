@@ -24,7 +24,7 @@ const Engagements = (app) => {
         const divParagraphe = document.createElement("div");
         divParagraphe.id = paragraphe;
 
-        const titreParagraphe = document.createElement("h3");
+        const titreParagraphe = document.createElement("h2");
         titreParagraphe.textContent = paragraphes[paragraphe]["titreh3"];
         divParagraphe.appendChild(titreParagraphe);
 
