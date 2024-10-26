@@ -39,9 +39,9 @@ const App = () => {
         if (Component) {
             Component(app);
         } else { Erreur404(app) }
-        app.appendChild(Menu());
         app.appendChild(Footer());
         app.appendChild(FooterMobile());
+        app.appendChild(Menu());
     }
 
     // Fonction qui permet de désactiver le comportement par défaut des liens (rechargement de page), d'affecter le nouveau chemin à la barre des taches et d'executer le rendu (handleLocation)
