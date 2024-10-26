@@ -72,16 +72,17 @@ h2,
 h3 {
     font-family: var(--title-font-family);
     font-weight: var(--title-font-wheight);
-    text-align: center;
     text-transform: uppercase;
 }
 
 h1 {
     font-size: 4em;
+    text-align: center;
 }
 
 h2 {
     font-size: 3em;
+    text-align: center;
 }
 
 h3 {

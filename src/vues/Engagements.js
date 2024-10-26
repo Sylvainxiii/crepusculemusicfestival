@@ -6,7 +6,7 @@ const paragraphes = page["paragraphes"]
 
 const Engagements = (app) => {
 
-    const titreEngagements = page["titreh2"];
+    const titreEngagements = page["titreh1"];
 
     const fragment = document.createDocumentFragment();
     const vueTitre = VueTitre(titreEngagements);
@@ -16,7 +16,7 @@ const Engagements = (app) => {
     const contenu = VueContainer();
     fragment.appendChild(contenu);
     const epilogue = document.createElement("p");
-    epilogue.textContent = page["epilogue"];
+    epilogue.innerHTML = page["epilogue"];
     contenu.appendChild(epilogue);
 
     for (let paragraphe in paragraphes) {
@@ -25,7 +25,7 @@ const Engagements = (app) => {
         divParagraphe.id = paragraphe;
 
         const titreParagraphe = document.createElement("h2");
-        titreParagraphe.textContent = paragraphes[paragraphe]["titreh3"];
+        titreParagraphe.innerHTML = paragraphes[paragraphe]["titreh2"];
         divParagraphe.appendChild(titreParagraphe);
 
         for (let liste in contenuParagraphe) {
@@ -36,15 +36,15 @@ const Engagements = (app) => {
                 const divListe = document.createElement("div");
                 divListe.id = liste;
 
-                const titreListe = document.createElement("div");
-                titreListe.textContent = contenuParagraphe[liste]["titreliste"];
+                const titreListe = document.createElement("h3");
+                titreListe.innerHTML = contenuParagraphe[liste]["titreh3"];
                 divListe.appendChild(titreListe);
 
                 const ulListe = document.createElement("ul");
                 for (let ligne in contenuListe) {
-                    if (ligne !== "titreliste") {
+                    if (ligne !== "titreh3") {
                         const liListe = document.createElement("li");
-                        liListe.textContent = contenuListe[ligne];
+                        liListe.innerHTML = contenuListe[ligne];
                         ulListe.appendChild(liListe);
                         divListe.appendChild(ulListe);
                     }
@@ -52,7 +52,7 @@ const Engagements = (app) => {
                 divParagraphe.appendChild(divListe);
             } else if (liste == "paragraphe") {
                 const sousParagraphe = document.createElement("p");
-                sousParagraphe.textContent = contenuParagraphe["paragraphe"];
+                sousParagraphe.innerHTML = contenuParagraphe["paragraphe"];
                 divParagraphe.appendChild(sousParagraphe);
             }
 

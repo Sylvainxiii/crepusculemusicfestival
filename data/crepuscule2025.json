@@ -5,7 +5,7 @@
         "vue": "Crepuscule.js",
         "module": "Crepuscule",
         "titreh2": "Entrez dans l’irréel !",
-        "texte": "Le CRÉPUSCULE Music Festival offre <strong>une expérience visuelle et musicale unique</strong> à la frontière de l’imaginaire.</br></br> Embarquez dans <strong>un show mêlant musique électronique, images et lumières transcendantes</strong> qui ne laisseront personnes indifférentes.",
+        "texte": "Le <strong>CRÉPUSCULE Music Festival</strong> offre <strong>une expérience visuelle et musicale unique</strong> à la frontière de l’imaginaire.</br></br> Embarquez dans <strong>un show mêlant musique électronique, images et lumières transcendantes</strong> qui ne laisseront personnes indifférentes.",
         "bouton": "En savoir Plus",
         "page": {
             "titreh1": "Le crepuscule music festival",
@@ -15,11 +15,11 @@
             },
             "paragraphe2": {
                 "titreh2": "Un engagement musical",
-                "paragraphe": "Le CRÉPUSCULE Music Festival met avant <strong>des artistes reconnus</strong> dans l’univers de la musique électronique, tout en soutenant des <strong>artistes émergeants</strong> de la scène locale albigeoise. Cette volonté de célébrer la diversité artistique est un des piliers du festival."
+                "paragraphe": "Le <strong>CRÉPUSCULE Music Festival</strong> met avant <strong>des artistes reconnus</strong> dans l’univers de la musique électronique, tout en soutenant des <strong>artistes émergeants</strong> de la scène locale albigeoise. Cette volonté de célébrer la diversité artistique est un des piliers du festival."
             },
             "paragraphe3": {
                 "titreh2": "Une expérience visuelle unique",
-                "paragraphe": "Le festival se démarque en proposant <strong>un véritable show son et lumière</strong> transcendant. En s’appuyant sur des experts dans le domaine des expériences immersives, le CRÉPUSCULE Music Festival se vit aussi bien avec les yeux qu’avec les oreilles."
+                "paragraphe": "Le festival se démarque en proposant <strong>un véritable show son et lumière</strong> transcendant. En s’appuyant sur des experts dans le domaine des expériences immersives, le <strong>CRÉPUSCULE Music Festival</strong> se vit aussi bien avec les yeux qu’avec les oreilles."
             },
             "paragraphe4": {
                 "titreh2": "L’origine du festival",
@@ -193,7 +193,7 @@
                     },
                     "question8": {
                         "question": "Jeux concours",
-                        "reponse": "D’après la loi n° 64-1360 du 31 décembre 1964, l’exploitation de la marque CRÉPUSCULE Music Festival, visant à faire gagner ces places sans l’accord de l’organisation, est strictement interdite. Cette réglementation implique toutes formes de jeux type concours, tombola, loterie ou autre dispositif équivalant."
+                        "reponse": "D’après la loi n° 64-1360 du 31 décembre 1964, l’exploitation de la marque <strong>CRÉPUSCULE Music Festival</strong>, visant à faire gagner ces places sans l’accord de l’organisation, est strictement interdite. Cette réglementation implique toutes formes de jeux type concours, tombola, loterie ou autre dispositif équivalant."
                     }
                 }
             }
@@ -205,30 +205,30 @@
         "vue": "Engagements.js",
         "module": "Engagements",
         "page": {
-            "titreh2": "Nos Engagements",
-            "epilogue": "Sensible aux défis sociétaux et environnementaux contemporains, l’équipe du CRÉPUSCULE Music Festival a, dès sa création, entrepris une réflexion visant à devenir un acteur du changement. Nous nous engageons à gérer les impacts du festival tout en l'inscrivant dans une dynamique de transition écologique et sociale. Grâce à cette volonté et à l'implication de nos équipes, cette édition du CMF se veut responsable et engagée, en s'inscrivant dans un processus d'amélioration continue.",
+            "titreh1": "Nos Engagements",
+            "epilogue": "Sensible aux défis sociétaux et environnementaux contemporains, l’équipe du <strong>CRÉPUSCULE Music Festival</strong> a, dès sa création, entrepris une réflexion visant à devenir un acteur du changement. Nous nous engageons à gérer les impacts du festival tout en l'inscrivant dans une dynamique de transition écologique et sociale. Grâce à cette volonté et à l'implication de nos équipes, cette édition du CMF se veut responsable et engagée, en s'inscrivant dans un processus d'amélioration continue.",
             "paragraphes": {
                 "paragraphe1": {
                     "titreh2": "Accessibilité",
                     "liste1": {
-                        "titreliste": "Mobilité",
-                        "ligne1": "Accès au festival via transports en commun ?",
-                        "ligne2": "Présence d’un parking PMR ?"
+                        "titreh3": "Mobilité",
+                        "ligne1": "Accès au festival via transports en commun?",
+                        "ligne2": "Présence d’un parking PMR?"
                     },
                     "liste2": {
-                        "titreliste": "Accueil",
-                        "ligne1": "Bénévoles formés pour l’accueil de personnes en situation de handicap ?",
-                        "ligne2": "Point info handi-accueil ?"
+                        "titreh3": "Accueil",
+                        "ligne1": "Bénévoles formés pour l’accueil de personnes en situation de handicap?",
+                        "ligne2": "Point info handi-accueil?"
                     },
                     "liste3": {
-                        "titreliste": "Site",
+                        "titreh3": "Site",
                         "ligne1": "terrain accessible aux personnes à mobilité réduite",
                         "ligne2": "sanitaires adaptés",
                         "ligne3": "files prioritaires à l’entrée du festival (à droite) et au niveau des bars",
                         "ligne4": "plateforme surélevée, sécurisée et accessible à tout moment aux personnes à besoins spécifiques"
                     },
                     "liste4": {
-                        "titreliste": "L’accès à la plateforme est possible pour :",
+                        "titreh3": "L’accès à la plateforme est possible pour :",
                         "ligne1": "les personnes en situation de handicap (justificatif CMI)",
                         "ligne2": "les personnes avec une mobilité réduite temporaire (déplacement avec  béquilles, station debout difficile…). Présentation d’un justificatif médical si possible",
                         "ligne3": "les femmes enceintes (dans la limite des places disponibles)",
@@ -237,9 +237,9 @@
                 },
                 "paragraphe2": {
                     "titreh2": "Prévention",
-                    "paragraphe": "La prévention des risques festifs fait partie intégrante des engagements du CRÉPUSCULE Music Festival qui entend sensibiliser ses festivalier.es et prévenir les risques liés à l’environnement festif : écoute de musique amplifiée, alcool, drogue…",
+                    "paragraphe": "La prévention des risques festifs fait partie intégrante des engagements du <strong>CRÉPUSCULE Music Festival</strong> qui entend sensibiliser ses festivalier.es et prévenir les risques liés à l’environnement festif : écoute de musique amplifiée, alcool, drogue…",
                     "liste1": {
-                        "titreliste": "Quelques rappels:",
+                        "titreh3": "Quelques rappels:",
                         "ligne1": "protège tes oreilles",
                         "ligne2": "fais des pauses",
                         "ligne3": "bois de l’eau",
@@ -254,7 +254,9 @@
                     "paragraphe": "Le CREPUSCULE Music Festival s’engage pour réduire son impact environnemental à travers des actions concrètes :",
                     "liste1": {
                         "ligne1": "Restriction du plastique à usage unique : gobelets réutilisables, foodtrucks…",
-                        "ligne2": "Tri sélectif et revalorisation des déchets"
+                        "ligne2": "Tri sélectif et revalorisation des déchets",
+                        "ligne3": "Engagement plat végétarien",
+                        "ligne4": "Restriction de l’usage du verre"
                     }
                 }
             }
