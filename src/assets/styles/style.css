@@ -15,9 +15,10 @@
     --main-font-color: var(--white);
     --main-font-family: "Montserrat", sans-serif;
     --main-font-size: 8px;
+    --main-font-weight: 500;
 
     --title-font-family: var(--main-font-family);
-    --title-font-wheight: 800;
+    --title-font-wheight: 900;
 
     --onglet-menu-font-size: 1.5em;
     --onglet-menu-font-wheight: var(--title-font-wheight);
@@ -51,6 +52,7 @@
 body {
     color: var(--main-font-color);
     font-family: var(--main-font-family);
+    font-weight: var(--main-font-weight);
     letter-spacing: 0.2em;
     font-size: var(--main-font-size);
     overflow: hidden;
@@ -104,6 +106,11 @@ a:visited {
 
 p {
     text-indent: 1.5em;
+}
+
+strong {
+    font-weight: 700;
+    font-size: 1.1em;
 }
 
 /* style standard pour composants */
