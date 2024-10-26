@@ -22,6 +22,7 @@ const AccueilPartenaires = () => {
     const index = Math.floor(Math.random() * (max - 0));
     // Génère la liste des 5 logos qui apparaissent: le central, les deux avant et les deux après avec le principe de liste infinie
     const listeLogoInitial = getLogos(partenaires["liste"], index);
+    console.log(listeLogoInitial);
 
     for (const logo in listeLogoInitial) {
         const logoPartenaire = document.createElement('img');
@@ -59,15 +60,15 @@ export default AccueilPartenaires;
 
 export function getLogos(liste, index) {
     const longueurListe = Object.keys(liste).length;
-
-    // Pour sélectionner deux éléments avant et après l'index
+    // Pour sélectionner trois éléments avant l'index
     let result = []
     for (let i = 3; i >= 1; i--) {
-        result.push(liste[(index - i) % longueurListe]);
+        result.push(liste[(index - i + longueurListe) % longueurListe]);
     }
 
     result.push(liste[index])  // Premier élément avant l'index
 
+    // Pour placer tous les logos restants après l'index
     for (let i = 1; i < longueurListe - 3; i++) {
         result.push(liste[(index + i) % longueurListe]);
     }
