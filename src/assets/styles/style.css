@@ -57,7 +57,7 @@ body {
 .app {
     width: 100vw;
     height: 100vh;
-    gap: 6em;
+    gap: 5em;
     position: relative;
     overflow-x: hidden;
     overflow-y: auto;
@@ -102,7 +102,6 @@ a:visited {
 
 p {
     text-indent: 1.5em;
-    margin: 1.5em 0 1.5em 0;
 }
 
 /* style standard pour composants */
@@ -189,6 +188,10 @@ p {
     display: none;
 }
 
+#footer {
+    display: none;
+}
+
 
 /* Media Queries */
 
@@ -196,6 +199,14 @@ p {
     body {
         font-size: calc(var(--main-font-size) + 4px);
         /* Tablet */
+    }
+
+    #footer {
+        display: flex;
+    }
+
+    #footer-mobile {
+        display: none;
     }
 }
 

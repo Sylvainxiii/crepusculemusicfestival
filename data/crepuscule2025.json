@@ -140,9 +140,11 @@
         "vue": "Info.js",
         "module": "Info",
         "festival": "Crepuscule Music Festival",
-        "location": "Salle de Pratgraussal, rue de Lamothe",
+        "lieux": "Salle de Pratgraussal",
+        "rue": "Rue de Lamothe",
         "CP": "81000",
         "ville": "Albi",
+        "google_map": "https://www.google.fr/maps/place/Salle+%C3%A9v%C3%A9nementielle+de+Pratgraussals+-+Ville+d%E2%80%99Albi/@43.9294898,2.1326514,1576m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12adc2b1e1f96dc1:0xcb42ef39d18f82b7!8m2!3d43.929486!4d2.1352263!16s%2Fg%2F11b75j7djr?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D",
         "dates": "08 mars 2025",
         "page": {
             "paragraphe1": {

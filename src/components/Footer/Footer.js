@@ -1,6 +1,5 @@
 import "./Footer.css";
-import map from "/src/assets/images/carte.webp";
-import { contact, footer } from "/data/crepuscule2025.json";
+import { contact, footer, info } from "/data/crepuscule2025.json";
 import logoFacebook from "/src/assets/images/facebook-f.svg";
 import logoInstagram from "/src/assets/images/instagram.svg";
 
@@ -21,6 +20,9 @@ const Footer = () => {
     titreSocialFooter.textContent = titreReseau;
     socialFooter.appendChild(titreSocialFooter);
 
+    const logoContainer = document.createElement('div');
+    logoContainer.classList.add("flex-row", "space-between");
+
     const facebook = document.createElement('a');
     facebook.classList.add("fa-brands", "fa-facebook-f");
     facebook.href = linkFacebook;
@@ -29,7 +31,7 @@ const Footer = () => {
     const imgFacebook = document.createElement("img");
     imgFacebook.src = logoFacebook;
     facebook.appendChild(imgFacebook);
-    socialFooter.appendChild(facebook);
+    logoContainer.appendChild(facebook);
 
     const instagram = document.createElement('a');
     instagram.classList.add("fa-brands", "fa-instagram");
@@ -39,7 +41,9 @@ const Footer = () => {
     const imgInstagram = document.createElement("img");
     imgInstagram.src = logoInstagram;
     instagram.appendChild(imgInstagram);
-    socialFooter.appendChild(instagram);
+    logoContainer.appendChild(instagram);
+
+    socialFooter.appendChild(logoContainer);
 
     fragment.appendChild(socialFooter);
 
@@ -64,19 +68,31 @@ const Footer = () => {
 
     // Volet Accès Festival--------------------------------------------------------------------------------------
     const titreAcces = footer["accesh2"];
+    const lieux = info["lieux"];
+    const rue = info["rue"];
+    const codePostal = info["CP"];
+    const ville = info["ville"];
+    const mapFooter = info["google_map"];
 
     const accesFooter = document.createElement('div');
     accesFooter.classList.add("flex-column", "start");
     accesFooter.id = "acces-footer";
 
+    const lienGoogleMap = document.createElement('a');
+    lienGoogleMap.href = mapFooter;
+    lienGoogleMap.target = "_blank";
+    lienGoogleMap.ariaLabel = "Localiser Crépuscule Music Festival";
+
     const titreaccesFooter = document.createElement('h2');
     titreaccesFooter.textContent = titreAcces;
-    accesFooter.appendChild(titreaccesFooter);
+    lienGoogleMap.appendChild(titreaccesFooter);
 
-    const mapaccesFooter = document.createElement('img');
-    mapaccesFooter.id = "map-acces-footer"
-    mapaccesFooter.src = map;
-    accesFooter.appendChild(mapaccesFooter);
+    const adresseFooter = document.createElement('div');
+    adresseFooter.classList.add("flex-column", "start");
+    adresseFooter.id = "adresse-footer";
+    adresseFooter.innerHTML = `<p>${lieux}</p><p>${rue}</p><p>${codePostal} ${ville}</p>`;
+    lienGoogleMap.appendChild(adresseFooter);
+    accesFooter.appendChild(lienGoogleMap);
 
     fragment.appendChild(accesFooter);
 

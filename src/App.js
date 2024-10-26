@@ -1,4 +1,5 @@
 import Footer from "/src/components/Footer/Footer.js";
+import FooterMobile from "/src/components/FooterMobile/FooterMobile.js";
 import Menu from "/src/components/Menu/Menu.js";
 import Accueil from "/src/vues/Accueil.js";
 import Billetterie from "/src/vues/Billetterie.js";
@@ -40,6 +41,7 @@ const App = () => {
         } else { Erreur404(app) }
         app.appendChild(Menu());
         app.appendChild(Footer());
+        app.appendChild(FooterMobile());
     }
 
     // Fonction qui permet de désactiver le comportement par défaut des liens (rechargement de page), d'affecter le nouveau chemin à la barre des taches et d'executer le rendu (handleLocation)

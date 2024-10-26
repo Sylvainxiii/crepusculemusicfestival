@@ -1,0 +1,13 @@
+#footer-mobile {
+    width: 100vw;
+    min-height: fit-content;
+    padding: 1em;
+    margin-top: 2em;
+    text-align: center;
+    gap: 2em;
+
+    img {
+        /* margin: 0.5em; */
+        height: 4em;
+    }
+}
