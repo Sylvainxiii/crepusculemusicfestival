@@ -1,5 +1,14 @@
 import "./AccueilPartenaires.css";
 import { partenaires } from "/data/crepuscule2025.json"
+const logoPartenaires = Object.fromEntries(
+    Object.entries(
+        import.meta.glob('/src/assets/images/partenaires/*.svg', { eager: true, import: 'default' })
+    ).map(([path, module]) => {
+        // Extraire juste le nom du fichier du chemin complet
+        const filename = path.split('/').pop();
+        return [filename, module];
+    })
+);
 
 const AccueilPartenaires = () => {
     const titreAccueilPartenaires = partenaires["titre"];
@@ -22,11 +31,11 @@ const AccueilPartenaires = () => {
     const index = Math.floor(Math.random() * (max - 0));
     // Génère la liste des 5 logos qui apparaissent: le central, les deux avant et les deux après avec le principe de liste infinie
     const listeLogoInitial = getLogos(partenaires["liste"], index);
-    console.log(listeLogoInitial);
 
     for (const logo in listeLogoInitial) {
         const logoPartenaire = document.createElement('img');
-        logoPartenaire.src = "/src/assets/images/partenaires/" + listeLogoInitial[logo]["logo"];
+        const logoSrc = logoPartenaires[listeLogoInitial[logo]["logo"]];
+        logoPartenaire.src = logoSrc;
         logoPartenaire.id = logo;
         logoPartenaire.className = ("logo-partenaire-accueil");
 
@@ -58,7 +67,7 @@ const AccueilPartenaires = () => {
 
 export default AccueilPartenaires;
 
-export function getLogos(liste, index) {
+function getLogos(liste, index) {
     const longueurListe = Object.keys(liste).length;
     // Pour sélectionner trois éléments avant l'index
     let result = []

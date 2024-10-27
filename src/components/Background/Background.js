@@ -1,4 +1,5 @@
 import "./Background.css";
+import img from "/src/assets/images/fond-body.webp";
 
 const Background = () => {
 
@@ -7,7 +8,7 @@ const Background = () => {
 
     const backgroundImg = document.createElement('img');
     backgroundImg.className = "background-img";
-    backgroundImg.src = "/src/assets/images/fond-body.webp";
+    backgroundImg.src = img;
 
     background.appendChild(backgroundImg);
 
