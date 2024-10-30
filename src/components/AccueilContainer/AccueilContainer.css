@@ -1,8 +1,8 @@
 .accueil-container {
     border: 0.1em solid var(--white);
     /* border-radius: 0.5em; */
-    width: 50%;
-    height: 50%;
+    width: 30vw;
+    height: 30vw;
     box-shadow:
         0 0 8px var(--white),
         inset 0 0 8px var(--white),
@@ -11,4 +11,10 @@
         0 0 32px rgb(189, 0, 255),
         inset 0 0 32px rgb(189, 0, 255);
     ;
+
+    canvas {
+        width: 80%;
+        aspect-ratio: 1/1;
+        border-radius: 0.5em;
+    }
 }

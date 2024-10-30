@@ -5,8 +5,8 @@
 #accueil-programmation-grille {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 50vw;
-    height: 50vw;
+    width: 80vw;
+    height: 80vw;
     margin: auto;
     margin-top: var(--marge-grille);
     margin-bottom: var(--marge-grille);
