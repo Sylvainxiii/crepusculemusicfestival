@@ -1,156 +1,156 @@
-import * as THREE from 'three';
+import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+// import testCubeModel from "/public/test_cube.gltf";
 
-export function genererArtefact(container, geometrie, couleur) {
-    let scene;
-    let renderer;
-    let camera;
-    let artefact;
-    let hemiLight;
-    let dirLight;
-    let axis;
+export function genererArtefact(container, couleur) {
+	let scene;
+	let renderer;
+	let camera;
+	let artefact;
+	let ambientLight;
+	let dirLight;
+	let dirLight2;
+	let axis;
 
-    // Fonction pour mettre à jour la taille
-    function updateSize() {
-        if (renderer && camera && container.clientWidth > 0 && container.clientHeight > 0) {
-            renderer.setSize(container.clientWidth, container.clientHeight);
-            camera.aspect = container.clientWidth / container.clientHeight;
-            camera.updateProjectionMatrix();
-        }
-    }
+	// Fonction pour mettre à jour la taille
+	function updateSize() {
+		if (renderer && camera && container.clientWidth > 0 && container.clientHeight > 0) {
+			renderer.setSize(container.clientWidth, container.clientHeight);
+			camera.aspect = container.clientWidth / container.clientHeight;
+			camera.updateProjectionMatrix();
+		}
+	}
 
-    // Fonction de rendu pour l'animation
-    function animate() {
-        if (renderer && scene && camera && artefact && axis) {
-            render(renderer, scene, camera, artefact, axis);
-            requestAnimationFrame(animate);
-        }
-    }
+	// Fonction de rendu pour l'animation
+	function animate() {
+		if (renderer && scene && camera && artefact && axis) {
+			render(renderer, scene, camera, artefact, axis);
+			requestAnimationFrame(animate);
+		}
+	}
 
-    // Fonction d'initialisation principale
-    function init() {
-        //------------------SCENE------------------
-        scene = new THREE.Scene();
+	// Fonction d'initialisation principale
+	function init() {
+		//------------------SCENE------------------
+		scene = new THREE.Scene();
 
-        //------------------RENDERER------------------
-        renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setClearColor(0xffffff, 0);
-        container.appendChild(renderer.domElement);
+		//------------------RENDERER------------------
+		renderer = new THREE.WebGLRenderer({ antialias: true });
+		renderer.setClearColor(0xffffff, 0);
+		renderer.shadowMap.enabled = true;
+		renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+		container.appendChild(renderer.domElement);
 
-        //------------------LUMIERE------------------
-        hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.6);
-        hemiLight.color.set(0.6, 0.75, 0.5);
-        hemiLight.groundColor.set(0.095, 0.5, 0.5);
-        hemiLight.position.set(0, 500, 0);
-        scene.add(hemiLight);
+		//------------------LUMIERE------------------
+		ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+		scene.add(ambientLight);
 
-        dirLight = new THREE.DirectionalLight(0xffffff, 1);
-        dirLight.position.set(-1, 0.75, 1);
-        dirLight.position.multiplyScalar(50);
-        dirLight.name = "dirlight";
+		dirLight = new THREE.PointLight(0xffffff, 100, 400, 1);
+		dirLight.position.set(-2, 2, 3);
+		dirLight.position.multiplyScalar(100);
+		scene.add(dirLight);
 
-        scene.add(dirLight);
+		dirLight.castShadow = true;
+		dirLight.shadow.mapSize.width = 1024;
+		dirLight.shadow.mapSize.height = 1024;
+		dirLight.shadow.camera.near = 1;
+		dirLight.shadow.camera.far = 500;
+		dirLight.shadow.bias = -0.001; // Réduire les artefacts d'ombres
 
-        dirLight.castShadow = true;
-        dirLight.shadowMapWidth = dirLight.shadowMapHeight = 1024 * 2;
+		dirLight2 = new THREE.DirectionalLight(couleur, 2);
+		dirLight2.position.set(5, -2, 3);
+		dirLight2.position.multiplyScalar(100);
+		scene.add(dirLight2);
 
-        const d = 300;
+		dirLight2.castShadow = true;
+		dirLight2.shadow.mapSize.width = 1024;
+		dirLight2.shadow.mapSize.height = 1024;
+		dirLight2.shadow.camera.near = 1;
+		dirLight2.shadow.camera.far = 500;
+		dirLight2.shadow.bias = -0.001; // Réduire les artefacts d'ombres
 
-        dirLight.shadowCameraLeft = -d;
-        dirLight.shadowCameraRight = d;
-        dirLight.shadowCameraTop = d;
-        dirLight.shadowCameraBottom = -d;
+		//------------------CAMERA------------------
+		camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 1, 1000);
+		camera.position.set(0, 0, container.clientWidth);
+		camera.lookAt(new THREE.Vector3(0, 0, 0));
+		scene.add(camera);
 
-        dirLight.shadowCameraFar = 3500;
-        dirLight.shadowBias = -0.0001;
-        dirLight.shadowDarkness = 0.35;
+		axis = new THREE.Vector3(0.5, 2, 0).normalize();
 
-        //------------------CAMERA------------------
-        camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 1, 1000);
-        camera.position.set(0, 0, container.clientWidth);
-        camera.lookAt(new THREE.Vector3(0, 0, 0));
-        scene.add(camera);
+		// Charger le modèle GLTF
+		const loader = new GLTFLoader();
+		loader.load(
+			"test_cube.gltf",
+			(gltf) => {
+				artefact = gltf.scene;
 
-        axis = new THREE.Vector3(0.5, 2, 0).normalize();
+				// Activer les ombres sur tous les enfants du modèle
+				artefact.traverse((child) => {
+					if (child.isMesh) {
+						child.castShadow = true;
+						child.receiveShadow = true;
+					}
+				});
 
-        artefact = forme(geometrie, couleur, axis);
-        scene.add(artefact);
+				scene.add(artefact);
 
-        // Initialiser la taille une fois que tout est créé
-        updateSize();
+				// Orientation initiale
+				const quaternion = new THREE.Quaternion();
+				const up = new THREE.Vector3(0, 1, 0);
+				quaternion.setFromUnitVectors(up, axis);
+				artefact.applyQuaternion(quaternion);
 
-        // Démarrer l'animation
-        animate();
-    }
+				// Ajuster l'échelle si nécessaire
+				const scaleFactor = 250; // Ajustez selon la taille de votre modèle
+				artefact.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
-    // Observer les changements de taille du container
-    const resizeObserver = new ResizeObserver(() => {
-        updateSize();
-    });
-    resizeObserver.observe(container);
+				// Initialiser la taille une fois que tout est créé
+				updateSize();
 
-    // Écouter aussi le redimensionnement de la fenêtre
-    window.addEventListener('resize', updateSize);
+				// Démarrer l'animation
+				animate();
+			},
+			undefined,
+			(error) => {
+				console.error("Erreur de chargement du modèle GLTF:", error);
+			}
+		);
+	}
 
-    // Attendons que le container ait une taille avant d'initialiser
-    if (container.clientWidth > 0 && container.clientHeight > 0) {
-        init();
-    } else {
-        // Si le container n'a pas encore de taille, on utilise un MutationObserver
-        const observer = new ResizeObserver((entries) => {
-            if (container.clientWidth > 0 && container.clientHeight > 0) {
-                observer.disconnect();
-                init();
-            }
-        });
-        observer.observe(container);
-    }
+	// Observer les changements de taille du container
+	const resizeObserver = new ResizeObserver(() => {
+		updateSize();
+	});
+	resizeObserver.observe(container);
 
-    // Retourner une fonction de nettoyage
-    return () => {
-        resizeObserver.disconnect();
-        window.removeEventListener('resize', updateSize);
-    };
-}
+	// Écouter aussi le redimensionnement de la fenêtre
+	window.addEventListener("resize", updateSize);
 
-function forme(geometry, couleur, axis) {
-    const material = new THREE.MeshPhysicalMaterial({ color: couleur, roughness: 0.5, metalness: 0, reflectivity: 0.5 });
+	// Attendons que le container ait une taille avant d'initialiser
+	if (container.clientWidth > 0 && container.clientHeight > 0) {
+		init();
+	} else {
+		// Si le container n'a pas encore de taille, on utilise un MutationObserver
+		const observer = new ResizeObserver((entries) => {
+			if (container.clientWidth > 0 && container.clientHeight > 0) {
+				observer.disconnect();
+				init();
+			}
+		});
+		observer.observe(container);
+	}
 
-    switch (geometry) {
-        case "cube":
-            geometry = new THREE.BoxGeometry(180, 180, 180);
-            break;
-
-        case "sphere":
-            geometry = new THREE.SphereGeometry(140, 100, 100);
-            break;
-
-        case "pyramide":
-            geometry = new THREE.CylinderGeometry(0, 160, 260, 4, 1);
-            break;
-
-        case "dodecaedre":
-            geometry = new THREE.TetrahedronGeometry(140, 2);
-            break;
-
-        default:
-            break;
-    }
-
-    const artefact = new THREE.Mesh(geometry, material);
-
-    //------------------ORIENTATION INITIALE------------------
-    const quaternion = new THREE.Quaternion();
-    const up = new THREE.Vector3(0, 1, 0);
-    quaternion.setFromUnitVectors(up, axis);
-    artefact.applyQuaternion(quaternion);
-
-    return artefact;
+	// Retourner une fonction de nettoyage
+	return () => {
+		resizeObserver.disconnect();
+		window.removeEventListener("resize", updateSize);
+	};
 }
 
 function render(renderer, scene, camera, artefact, axis) {
-    const angle = 0.01;
-    const quaternion = new THREE.Quaternion();
-    quaternion.setFromAxisAngle(axis, angle);
-    artefact.quaternion.multiplyQuaternions(quaternion, artefact.quaternion);
-    renderer.render(scene, camera);
+	const angle = 0.01;
+	const quaternion = new THREE.Quaternion();
+	quaternion.setFromAxisAngle(axis, angle);
+	artefact.quaternion.multiplyQuaternions(quaternion, artefact.quaternion);
+	renderer.render(scene, camera);
 }

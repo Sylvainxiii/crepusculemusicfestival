@@ -4,37 +4,36 @@ import { programmation } from "/data/crepuscule2025.json";
 import { genererArtefact } from "../Artefact/Artefact";
 
 const AccueilProgrammation = () => {
+	const titreAccueilProgrammation = programmation["titre"];
+	const artistes = programmation["artistes"];
 
-    const titreAccueilProgrammation = programmation["titre"];
-    const artistes = programmation["artistes"];
+	const fragment = document.createDocumentFragment();
 
-    const fragment = document.createDocumentFragment();
+	const titre = document.createElement("h1");
+	titre.innerText = titreAccueilProgrammation;
+	fragment.appendChild(titre);
 
-    const titre = document.createElement('h1');
-    titre.innerText = titreAccueilProgrammation;
-    fragment.appendChild(titre);
+	artistes.map((artiste) => {
+		const container = AccueilContainer();
+		container.classList.add("container-artefact-accueil");
+		container.id = "artiste" + artistes.indexOf(artiste);
+		genererArtefact(container, artiste["couleur"]);
 
-    artistes.map(artiste => {
-        const container = AccueilContainer();
-        container.classList.add("container-artefact-accueil");
-        container.id = "artiste" + artistes.indexOf(artiste);
-        genererArtefact(container, artiste["artefact"], artiste["couleur"]);
+		fragment.appendChild(container);
+	});
 
-        fragment.appendChild(container);
-    })
+	const accueilProgrammationGrille = document.createElement("div");
+	accueilProgrammationGrille.id = "accueil-programmation-grille";
+	accueilProgrammationGrille.className = "grid";
+	accueilProgrammationGrille.appendChild(fragment);
 
-    const accueilProgrammationGrille = document.createElement("div");
-    accueilProgrammationGrille.id = "accueil-programmation-grille";
-    accueilProgrammationGrille.className = "grid";
-    accueilProgrammationGrille.appendChild(fragment);
+	const accueilProgrammation = document.createElement("div");
+	accueilProgrammation.id = "accueil-programmation";
+	accueilProgrammation.classList.add("flex-column", "center");
+	accueilProgrammation.appendChild(titre);
+	accueilProgrammation.appendChild(accueilProgrammationGrille);
 
-    const accueilProgrammation = document.createElement("div");
-    accueilProgrammation.id = "accueil-programmation";
-    accueilProgrammation.classList.add("flex-column", "center");
-    accueilProgrammation.appendChild(titre);
-    accueilProgrammation.appendChild(accueilProgrammationGrille);
-
-    return accueilProgrammation;
-}
+	return accueilProgrammation;
+};
 
 export default AccueilProgrammation;
