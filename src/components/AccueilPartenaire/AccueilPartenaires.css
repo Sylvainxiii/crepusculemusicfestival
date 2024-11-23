@@ -15,13 +15,13 @@
 .logo-partenaire-accueil {
     aspect-ratio: 1/1;
     max-height: 100%;
-    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out, left 1.5s ease-in-out, width 1.5s ease-in-out;
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out, left 1.5s ease-in-out, height 1.5s ease-in-out;
     position: absolute;
     left: 0;
 }
 
 .logo-centre {
-    width: 20%;
+    height: 20em;
     opacity: 1;
     left: 50%;
     /* Centré horizontalement */
@@ -30,7 +30,7 @@
 
 .logo-voisin-2,
 .logo-voisin-4 {
-    width: 12%;
+    height: 14em;
     opacity: 0.8;
 }
 
@@ -46,7 +46,7 @@
 
 .logo-voisin-1,
 .logo-voisin-5 {
-    width: 8%;
+    height: 10em;
     opacity: 0.4;
 }
 
@@ -62,19 +62,19 @@
 
 .logo-hidden-gauche,
 .logo-hidden-droite {
-    width: 0;
+    height: 0;
     opacity: 0;
 }
 
 .logo-hidden-gauche {
-    left: -10%;
+    left: -5%;
 }
 
 .logo-hidden-droite {
-    left: 110%;
+    left: 105%;
 }
 
 .hidden-logo {
-    width: 0;
+    height: 0;
     opacity: 0;
 }
